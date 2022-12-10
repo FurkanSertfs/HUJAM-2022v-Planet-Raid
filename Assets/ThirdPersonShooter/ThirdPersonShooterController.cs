@@ -18,15 +18,22 @@ public class ThirdPersonShooterController : MonoBehaviour {
     [SerializeField] private Transform vfxHitRed;
     [SerializeField] private Transform spine;
     [SerializeField] private Transform gunPosition;
+    [SerializeField] private int bulletCost;
 
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
+    private BaseManager manager;
+   
 
     private void Awake() {
         thirdPersonController = GetComponent<ThirdPersonController>();
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         animator = GetComponent<Animator>();
+    }
+    private void Start()
+    {
+        manager = BaseManager.instance;
     }
 
     private void Update() {
@@ -75,28 +82,35 @@ public class ThirdPersonShooterController : MonoBehaviour {
         if (starterAssetsInputs.shoot&&starterAssetsInputs.aim) 
         
         {
-         
-            
-                /*
-           // Hit Scan Shoot
-           if (hitTransform != null) {
-               // Hit something
-               if (hitTransform.GetComponent<BulletTarget>() != null) {
-                   // Hit target
-                   Instantiate(vfxHitGreen, mouseWorldPosition, Quaternion.identity);
-               } else {
-                   // Hit something else
-                   Instantiate(vfxHitRed, mouseWorldPosition, Quaternion.identity);
-               }
-           }
-           //*/
-                //*
-                // Projectile Shoot
+            if (manager.currentBattery>bulletCost)
+            {
                 Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
                 Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
                 //*/
                 starterAssetsInputs.shoot = false;
-            
+                manager.currentBattery -= bulletCost;
+            }
+
+           
+
+
+            /*
+       // Hit Scan Shoot
+       if (hitTransform != null) {
+           // Hit something
+           if (hitTransform.GetComponent<BulletTarget>() != null) {
+               // Hit target
+               Instantiate(vfxHitGreen, mouseWorldPosition, Quaternion.identity);
+           } else {
+               // Hit something else
+               Instantiate(vfxHitRed, mouseWorldPosition, Quaternion.identity);
+           }
+       }
+       //*/
+            //*
+            // Projectile Shoot
+
+
         }
         else
         {
