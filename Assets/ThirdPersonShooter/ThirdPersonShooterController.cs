@@ -49,13 +49,22 @@ public class ThirdPersonShooterController : MonoBehaviour {
             animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 1f, Time.deltaTime * 13f));
 
             Vector3 worldAimTarget = mouseWorldPosition;
+            Vector3 spineWorldAimTarget = mouseWorldPosition;
+
             worldAimTarget.y = transform.position.y;
+           // spineWorldAimTarget.y = spine.transform.position.y;
             Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
-            Vector3 spineAimDirection = (worldAimTarget - gunPosition.transform.position).normalized;
+           // Vector3 spineAimDirection = (spineWorldAimTarget - spine.transform.position).normalized;
 
             transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
-            spine.transform.forward = Vector3.Lerp(transform.forward, spineAimDirection, Time.deltaTime * 20f);
-        } else {
+            //  spine.transform.forward = Vector3.Lerp(spine.transform.forward, spineAimDirection, Time.deltaTime * 20f);
+
+
+          
+        } 
+        
+        else 
+        {
             aimVirtualCamera.gameObject.SetActive(false);
             thirdPersonController.SetSensitivity(normalSensitivity);
             thirdPersonController.SetRotateOnMove(true);
@@ -95,6 +104,18 @@ public class ThirdPersonShooterController : MonoBehaviour {
 
         }
 
+    }
+
+
+    private void LateUpdate()
+    {
+        if (starterAssetsInputs.aim)
+        {
+            var rotationVector = spine.transform.rotation.eulerAngles;
+            rotationVector.y += 30;
+            spine.transform.rotation = Quaternion.Euler(rotationVector);
+        }
+       
     }
 
 }
