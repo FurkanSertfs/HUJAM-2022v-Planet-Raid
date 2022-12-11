@@ -205,5 +205,5 @@ public class EnemyType
     public GameObject weraponPrefab;
     public int health;
     public int damage;
-
+    public float fireSpeed;
 }
