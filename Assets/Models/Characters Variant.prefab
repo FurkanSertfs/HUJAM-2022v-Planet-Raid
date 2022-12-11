@@ -884,6 +884,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1157064329805200, guid: d9162a78a8deb714a9bddd8038021008, type: 3}
   m_PrefabInstance: {fileID: 7288925865058862596}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &7753787615143724142
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287572307567407978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.62064284, y: 1.8865104, z: 1}
+  m_Center: {x: 0.009532303, y: 0.934463, z: 0}
 --- !u!195 &654887933
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -919,90 +932,77 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTypes:
-  - prefab: {fileID: 7287557957599596764}
-    scaleFactor: 2
-    weraponPrefab: {fileID: 7287707591365735481}
-    health: 150
-    damage: 50
-    fireSpeed: 10
-  - prefab: {fileID: 7287133480699261622}
-    scaleFactor: 1
-    weraponPrefab: {fileID: 7287172092425744766}
-    health: 50
-    damage: 20
-    fireSpeed: 0
-  - prefab: {fileID: 7287205062998323078}
-    scaleFactor: 1
-    weraponPrefab: {fileID: 7287308278886033378}
-    health: 60
-    damage: 20
-    fireSpeed: 15
-  - prefab: {fileID: 7287290495118487688}
-    scaleFactor: 2
-    weraponPrefab: {fileID: 7287522418216942819}
-    health: 200
-    damage: 50
-    fireSpeed: 5
-  - prefab: {fileID: 7287175902768333940}
-    scaleFactor: 4
-    weraponPrefab: {fileID: 7287344474393980709}
-    health: 300
-    damage: 50
-    fireSpeed: 6
-  - prefab: {fileID: 7287111376191039684}
-    scaleFactor: 2
-    weraponPrefab: {fileID: 7288108192616380321}
-    health: 200
-    damage: 50
-    fireSpeed: 10
   - prefab: {fileID: 7287786461903043476}
     scaleFactor: 1
     weraponPrefab: {fileID: 7287641016903497846}
     health: 30
-    damage: 20
+    damage: 2
     fireSpeed: 5
   - prefab: {fileID: 7287836128210015402}
     scaleFactor: 1
     weraponPrefab: {fileID: 7287650448411291347}
     health: 35
     damage: 20
-    fireSpeed: 5
-  - prefab: {fileID: 7287785842895430386}
-    scaleFactor: 2
-    weraponPrefab: {fileID: 7287410512910127698}
-    health: 150
-    damage: 30
-    fireSpeed: 25
-  - prefab: {fileID: 7287346141074848496}
-    scaleFactor: 1
-    weraponPrefab: {fileID: 7287710384259879296}
-    health: 100
-    damage: 20
-    fireSpeed: 10
+    fireSpeed: 1.5
   - prefab: {fileID: 7287756735640795372}
     scaleFactor: 1
     weraponPrefab: {fileID: 7288113549685288027}
     health: 40
     damage: 10
-    fireSpeed: 5
+    fireSpeed: 1.5
+  - prefab: {fileID: 7287133480699261622}
+    scaleFactor: 1
+    weraponPrefab: {fileID: 7287172092425744766}
+    health: 50
+    damage: 20
+    fireSpeed: 1.5
+  - prefab: {fileID: 7287205062998323078}
+    scaleFactor: 1
+    weraponPrefab: {fileID: 7287308278886033378}
+    health: 60
+    damage: 20
+    fireSpeed: 1.2
+  - prefab: {fileID: 7287346141074848496}
+    scaleFactor: 1
+    weraponPrefab: {fileID: 7287710384259879296}
+    health: 100
+    damage: 20
+    fireSpeed: 1
+  - prefab: {fileID: 7287785842895430386}
+    scaleFactor: 2
+    weraponPrefab: {fileID: 7287410512910127698}
+    health: 150
+    damage: 30
+    fireSpeed: 1
+  - prefab: {fileID: 7287557957599596764}
+    scaleFactor: 2
+    weraponPrefab: {fileID: 7287707591365735481}
+    health: 150
+    damage: 50
+    fireSpeed: 10
+  - prefab: {fileID: 7287290495118487688}
+    scaleFactor: 2
+    weraponPrefab: {fileID: 7287522418216942819}
+    health: 200
+    damage: 50
+    fireSpeed: 1
+  - prefab: {fileID: 7287111376191039684}
+    scaleFactor: 2
+    weraponPrefab: {fileID: 7288108192616380321}
+    health: 200
+    damage: 50
+    fireSpeed: 1
+  - prefab: {fileID: 7287175902768333940}
+    scaleFactor: 4
+    weraponPrefab: {fileID: 7287344474393980709}
+    health: 300
+    damage: 50
+    fireSpeed: 1
   health: 0
   mainBase: {fileID: 0}
   target: {fileID: 0}
   attackables: []
   isAttacking: 0
---- !u!65 &7753787615143724142
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7287572307567407978}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.62064284, y: 1.8865104, z: 1}
-  m_Center: {x: 0.009532303, y: 0.934463, z: 0}
 --- !u!1001 &7288925865060463842
 PrefabInstance:
   m_ObjectHideFlags: 0
