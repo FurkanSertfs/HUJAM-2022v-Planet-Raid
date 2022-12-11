@@ -214,8 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c4c934556d3cd4290264791a2b3ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMatirial:
-  - {fileID: 2100000, guid: cf1b290f3108f1c41b5b5c043f496434, type: 2}
+  redMatirial: {fileID: 2100000, guid: cf1b290f3108f1c41b5b5c043f496434, type: 2}
   canBuild: 0
 --- !u!54 &842082229131348411
 Rigidbody:

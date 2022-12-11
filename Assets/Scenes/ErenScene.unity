@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Greeble_10 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7642296419988177416, guid: 645ab4d91b0f1324bb77bf105812ddb0, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 645ab4d91b0f1324bb77bf105812ddb0, type: 3}
 --- !u!1001 &63930846
@@ -192,9 +196,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1204115322}
     m_Modifications:
+    - target: {fileID: 1528405505082155832, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1528960378537518342, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Crate_01 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528960378537518342, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1530459723235904248, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
       propertyPath: m_RootOrder
@@ -251,7 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 64104877}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +296,7 @@ GameObject:
   - component: {fileID: 67026759}
   - component: {fileID: 67026760}
   - component: {fileID: 67026761}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Icosphere.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 96906345}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,6 +501,10 @@ PrefabInstance:
     - target: {fileID: 1724716710222150, guid: 4d50bfb18c1b6564e8f06a5249b65488, type: 3}
       propertyPath: m_Name
       value: SM_Env_Plant_Tall_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724716710222150, guid: 4d50bfb18c1b6564e8f06a5249b65488, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4890848677432178, guid: 4d50bfb18c1b6564e8f06a5249b65488, type: 3}
       propertyPath: m_RootOrder
@@ -547,7 +563,7 @@ GameObject:
   - component: {fileID: 136140872}
   - component: {fileID: 136140871}
   - component: {fileID: 136140873}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tree-maple-low-poly-Anim (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +629,7 @@ GameObject:
   - component: {fileID: 155736831}
   - component: {fileID: 155736832}
   - component: {fileID: 155736833}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Icosphere.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -711,7 +727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 156172910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,6 +759,10 @@ PrefabInstance:
     - target: {fileID: 1399255476349538, guid: b225b6c4fbbf1f5419c8b635c434c1c4, type: 3}
       propertyPath: m_Name
       value: SM_Env_Grass_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399255476349538, guid: b225b6c4fbbf1f5419c8b635c434c1c4, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4715379540816738, guid: b225b6c4fbbf1f5419c8b635c434c1c4, type: 3}
       propertyPath: m_RootOrder
@@ -799,7 +819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 176554445}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -831,6 +851,10 @@ PrefabInstance:
     - target: {fileID: 1622918088618118, guid: ff90e03d0175be643bba09a16649a5f7, type: 3}
       propertyPath: m_Name
       value: SM_Prop_HoverPad_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1622918088618118, guid: ff90e03d0175be643bba09a16649a5f7, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4068340997060302, guid: ff90e03d0175be643bba09a16649a5f7, type: 3}
       propertyPath: m_RootOrder
@@ -888,6 +912,10 @@ PrefabInstance:
     - target: {fileID: 1331162619263970, guid: f5a8c4384185b584d9506b7adf58388c, type: 3}
       propertyPath: m_Name
       value: SM_Env_Plant_Kelp_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331162619263970, guid: f5a8c4384185b584d9506b7adf58388c, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4605106085939642, guid: f5a8c4384185b584d9506b7adf58388c, type: 3}
       propertyPath: m_RootOrder
@@ -1071,7 +1099,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 206159034}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1169,9 +1197,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1204115322}
     m_Modifications:
+    - target: {fileID: 1528405505082155832, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1528960378537518342, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Crate_01 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528960378537518342, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1530459723235904248, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
       propertyPath: m_RootOrder
@@ -1233,7 +1269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 263296678}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1268,7 +1304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 277559407}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1299,7 +1335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 296033657}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1361,7 +1397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 336877176}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1424,7 +1460,7 @@ GameObject:
   - component: {fileID: 346000523}
   - component: {fileID: 346000524}
   - component: {fileID: 346000525}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Icosphere.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1524,6 +1560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Plant_Kelp_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1331162619263970, guid: f5a8c4384185b584d9506b7adf58388c, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4605106085939642, guid: f5a8c4384185b584d9506b7adf58388c, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -1610,6 +1650,10 @@ PrefabInstance:
     - target: {fileID: 1966027299867978, guid: 20c02be00d69ef94093f0fd4424cad88, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Scav_Scrap_36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966027299867978, guid: 20c02be00d69ef94093f0fd4424cad88, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4631899346157970, guid: 20c02be00d69ef94093f0fd4424cad88, type: 3}
       propertyPath: m_RootOrder
@@ -1708,7 +1752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 370118614}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1744,7 +1788,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 390839837}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1775,7 +1819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 404386373}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1832,6 +1876,10 @@ PrefabInstance:
     - target: {fileID: 1335361551665818, guid: ee788b58eb574124b9c7ebdfd8178ce4, type: 3}
       propertyPath: m_Name
       value: FX_Dust_Blowing_Explorer_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335361551665818, guid: ee788b58eb574124b9c7ebdfd8178ce4, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4624409260891266, guid: ee788b58eb574124b9c7ebdfd8178ce4, type: 3}
       propertyPath: m_RootOrder
@@ -1892,7 +1940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 470136467}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1924,6 +1972,10 @@ PrefabInstance:
     - target: {fileID: 1331162619263970, guid: f5a8c4384185b584d9506b7adf58388c, type: 3}
       propertyPath: m_Name
       value: SM_Env_Plant_Kelp_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331162619263970, guid: f5a8c4384185b584d9506b7adf58388c, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4605106085939642, guid: f5a8c4384185b584d9506b7adf58388c, type: 3}
       propertyPath: m_RootOrder
@@ -1982,7 +2034,7 @@ GameObject:
   - component: {fileID: 554761953}
   - component: {fileID: 554761952}
   - component: {fileID: 554761954}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tree-maple-low-poly-Anim (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2174,7 +2226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 635273159}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2212,7 +2264,7 @@ GameObject:
   - component: {fileID: 647788457}
   - component: {fileID: 647788459}
   - component: {fileID: 647788458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Icosphere.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2312,6 +2364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Table_Small_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1328513258389464, guid: d9fcc61dcdf5a824482ec730ba796b47, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4484336936513742, guid: d9fcc61dcdf5a824482ec730ba796b47, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -2402,7 +2458,7 @@ GameObject:
   - component: {fileID: 684799895}
   - component: {fileID: 684799897}
   - component: {fileID: 684799896}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Icosphere.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2500,7 +2556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 689489612}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2582,6 +2638,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Bed_Double_01 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2362795970196686309, guid: efd3b8389ccf2c04dbed327c0e880136, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2363042151398060581, guid: efd3b8389ccf2c04dbed327c0e880136, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efd3b8389ccf2c04dbed327c0e880136, type: 3}
 --- !u!1 &711325303
@@ -2595,7 +2659,7 @@ GameObject:
   - component: {fileID: 711325304}
   - component: {fileID: 711325305}
   - component: {fileID: 711325306}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Icosphere.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2693,7 +2757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 714113515}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2724,7 +2788,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 715561446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2755,7 +2819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 715641670}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2786,7 +2850,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 719396416}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2817,7 +2881,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 736034548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2917,7 +2981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 755758360}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2950,7 +3014,7 @@ GameObject:
   - component: {fileID: 785083144}
   - component: {fileID: 785083143}
   - component: {fileID: 785083145}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tree-maple-low-poly-Anim (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3016,6 +3080,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Scav_Scrap_36 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1966027299867978, guid: 20c02be00d69ef94093f0fd4424cad88, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4631899346157970, guid: 20c02be00d69ef94093f0fd4424cad88, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -3078,6 +3146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FX_Alien_Insects_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1332403591011784, guid: 48369741a316b9345970b11fcca0c683, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4611973369040508, guid: 48369741a316b9345970b11fcca0c683, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -3134,6 +3206,10 @@ PrefabInstance:
     - target: {fileID: 1538268855690490, guid: aa5b056f1bc26a641a837ff3604c5ebc, type: 3}
       propertyPath: m_Name
       value: SM_Env_Plant_Kelp_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1538268855690490, guid: aa5b056f1bc26a641a837ff3604c5ebc, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4121460630685276, guid: aa5b056f1bc26a641a837ff3604c5ebc, type: 3}
       propertyPath: m_RootOrder
@@ -3192,7 +3268,7 @@ GameObject:
   - component: {fileID: 865081249}
   - component: {fileID: 865081248}
   - component: {fileID: 865081250}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tree-maple-low-poly-Anim (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3373,6 +3449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Greeble_10 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2277665576475640415, guid: c422c44491f2e5b429c3b7230e5f4110, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c422c44491f2e5b429c3b7230e5f4110, type: 3}
 --- !u!1 &926035214
@@ -3384,7 +3464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 926035215}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3417,7 +3497,7 @@ GameObject:
   - component: {fileID: 937875293}
   - component: {fileID: 937875294}
   - component: {fileID: 937875295}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Icosphere.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3570,7 +3650,7 @@ GameObject:
   - component: {fileID: 984216682}
   - component: {fileID: 984216681}
   - component: {fileID: 984216683}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tree-maple-low-poly-Anim (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3972,7 +4052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2112546169751087306, guid: e932c61993224ea4488aa44bb78a254d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e932c61993224ea4488aa44bb78a254d, type: 3}
@@ -4149,6 +4229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Scav_Scrap_50
       objectReference: {fileID: 0}
+    - target: {fileID: 1954637724392444, guid: b5334abb5a1f8ef4c82b0375396ebfb3, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4759589246756302, guid: b5334abb5a1f8ef4c82b0375396ebfb3, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -4209,7 +4293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1054508632}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4298,6 +4382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Projection_Table_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 870368270588420033, guid: 9dffe5440d5211c45bc4a876565e57d4, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dffe5440d5211c45bc4a876565e57d4, type: 3}
 --- !u!4 &1076418643 stripped
@@ -4314,7 +4402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1082937179}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4345,7 +4433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1087773391}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4373,9 +4461,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1204115322}
     m_Modifications:
+    - target: {fileID: 1528405505082155832, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1528960378537518342, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Crate_01 (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528960378537518342, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1530459723235904248, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
       propertyPath: m_RootOrder
@@ -4587,7 +4683,7 @@ GameObject:
   - component: {fileID: 1127477415}
   - component: {fileID: 1127477417}
   - component: {fileID: 1127477416}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Icosphere.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4685,7 +4781,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1128225426}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4716,7 +4812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1150957211}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4748,6 +4844,10 @@ PrefabInstance:
     - target: {fileID: 1553663649874684, guid: 4fcbae4f82696734a9d1556059c9e943, type: 3}
       propertyPath: m_Name
       value: FX_Alien_Insects_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553663649874684, guid: 4fcbae4f82696734a9d1556059c9e943, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4403070986752592, guid: 4fcbae4f82696734a9d1556059c9e943, type: 3}
       propertyPath: m_RootOrder
@@ -4826,7 +4926,7 @@ GameObject:
   - component: {fileID: 1155042833}
   - component: {fileID: 1155042832}
   - component: {fileID: 1155042834}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tree-maple-low-poly-Anim (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4888,9 +4988,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1204115322}
     m_Modifications:
+    - target: {fileID: 1286481229741936, guid: d659376cd80f89c4da73e7c9f00be6dd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1396743394238084, guid: d659376cd80f89c4da73e7c9f00be6dd, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Monitor_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396743394238084, guid: d659376cd80f89c4da73e7c9f00be6dd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699190178029586, guid: d659376cd80f89c4da73e7c9f00be6dd, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4100528337241142, guid: d659376cd80f89c4da73e7c9f00be6dd, type: 3}
       propertyPath: m_RootOrder
@@ -4959,7 +5071,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1157862749}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5150,7 +5262,7 @@ GameObject:
   - component: {fileID: 1214966044}
   - component: {fileID: 1214966043}
   - component: {fileID: 1214966045}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tree-maple-low-poly-Anim (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5249,7 +5361,7 @@ GameObject:
   - component: {fileID: 1225057233}
   - component: {fileID: 1225057232}
   - component: {fileID: 1225057234}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tree-maple-low-poly-Anim (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5366,7 +5478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1262462346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5433,6 +5545,10 @@ PrefabInstance:
     - target: {fileID: 1028392437893990, guid: 6c7746ba66a19114caabd968c1d34164, type: 3}
       propertyPath: m_Name
       value: SM_Env_Grass_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1028392437893990, guid: 6c7746ba66a19114caabd968c1d34164, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4869034851624340, guid: 6c7746ba66a19114caabd968c1d34164, type: 3}
       propertyPath: m_RootOrder
@@ -5537,7 +5653,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: dd2e512e8d1b0b54897ea5e1ffb58c10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5575,8 +5691,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1304168388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.1, y: -0.1, z: 45.9}
-  m_LocalScale: {x: 10.298142, y: 9.0308, z: 11.349007}
+  m_LocalPosition: {x: 32.3, y: -0.1, z: 45.9}
+  m_LocalScale: {x: 10.596789, y: 9.0308, z: 10.177335}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 21
@@ -5616,6 +5732,10 @@ PrefabInstance:
     - target: {fileID: 1213798347704644, guid: 97965c293f02f4247882883522925d0f, type: 3}
       propertyPath: m_Name
       value: SM_Env_Plant_Tall_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213798347704644, guid: 97965c293f02f4247882883522925d0f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4708127204986914, guid: 97965c293f02f4247882883522925d0f, type: 3}
       propertyPath: m_RootOrder
@@ -5749,7 +5869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1424045233}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5842,7 +5962,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447742087}
   - component: {fileID: 1447742088}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5936,7 +6056,7 @@ GameObject:
   - component: {fileID: 1448192681}
   - component: {fileID: 1448192682}
   - component: {fileID: 1448192683}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Icosphere.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6089,7 +6209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1538693595}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6120,7 +6240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1570380391}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6151,7 +6271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1575649468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6183,6 +6303,10 @@ PrefabInstance:
     - target: {fileID: 1471111571945966, guid: a5b2e8e1b9fb9f046ab5a5f9c76122a7, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Scav_Scrap_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471111571945966, guid: a5b2e8e1b9fb9f046ab5a5f9c76122a7, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4628518294476002, guid: a5b2e8e1b9fb9f046ab5a5f9c76122a7, type: 3}
       propertyPath: m_RootOrder
@@ -6239,7 +6363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1586309600}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6267,9 +6391,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1204115322}
     m_Modifications:
+    - target: {fileID: 1528405505082155832, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1528960378537518342, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Crate_01 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528960378537518342, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1530459723235904248, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
       propertyPath: m_RootOrder
@@ -6376,9 +6508,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1204115322}
     m_Modifications:
+    - target: {fileID: 1528405505082155832, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1528960378537518342, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Crate_01 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1528960378537518342, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1530459723235904248, guid: 177e3a36bbb90a049b66f7ebeeb923f2, type: 3}
       propertyPath: m_RootOrder
@@ -6437,6 +6577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Scav_Scrap_45
       objectReference: {fileID: 0}
+    - target: {fileID: 1908976203034522, guid: ef29ac52006f5e4418cd89cb3a795a43, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4783611471211808, guid: ef29ac52006f5e4418cd89cb3a795a43, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -6492,7 +6636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1700330608}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6523,7 +6667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1702024543}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6555,7 +6699,7 @@ GameObject:
   - component: {fileID: 1721687347}
   - component: {fileID: 1721687346}
   - component: {fileID: 1721687345}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tree-maple-low-poly-Anim (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6638,7 +6782,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1728839288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6863,7 +7007,7 @@ GameObject:
   - component: {fileID: 1832716007}
   - component: {fileID: 1832716006}
   - component: {fileID: 1832716008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tree-maple-low-poly-Anim (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6927,7 +7071,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1837130502}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7051,7 +7195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1931594730}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7112,7 +7256,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1944532716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7246,7 +7390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1968660480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7395,6 +7539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FX_Alien_Insects_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1553663649874684, guid: 4fcbae4f82696734a9d1556059c9e943, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4403070986752592, guid: 4fcbae4f82696734a9d1556059c9e943, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -7472,7 +7620,7 @@ GameObject:
   - component: {fileID: 2024519553}
   - component: {fileID: 2024519552}
   - component: {fileID: 2024519554}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tree-maple-low-poly-Anim (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7537,6 +7685,10 @@ PrefabInstance:
     - target: {fileID: 1553663649874684, guid: 4fcbae4f82696734a9d1556059c9e943, type: 3}
       propertyPath: m_Name
       value: FX_Alien_Insects_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553663649874684, guid: 4fcbae4f82696734a9d1556059c9e943, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4403070986752592, guid: 4fcbae4f82696734a9d1556059c9e943, type: 3}
       propertyPath: m_RootOrder
@@ -7708,7 +7860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2075050197}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7738,7 +7890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2082208971}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7843,7 +7995,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2101592435}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7875,7 +8027,7 @@ GameObject:
   - component: {fileID: 2144204913}
   - component: {fileID: 2144204914}
   - component: {fileID: 2144204915}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Icosphere.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7990,7 +8142,7 @@ GameObject:
   - component: {fileID: 728234121889974592}
   - component: {fileID: 94828204134650875}
   - component: {fileID: 94828204134650876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tree-maple-low-poly-Anim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8231,7 +8383,7 @@ GameObject:
   - component: {fileID: 3190330924303710913}
   - component: {fileID: 5466136096437073034}
   - component: {fileID: 878731530781062983}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Icosphere.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8884,7 +9036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3030076892920010297}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11129,7 +11281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6255379502526692018}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11223,7 +11375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9211896424903247216}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bone.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11241,7 +11393,7 @@ GameObject:
   - component: {fileID: 6185001886708747028}
   - component: {fileID: 6185001886708747027}
   - component: {fileID: 6185001886708747026}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SimpleLightningBoltPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11914,7 +12066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8551174889992215006}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
