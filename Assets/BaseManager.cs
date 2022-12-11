@@ -17,6 +17,7 @@ public class BaseManager : MonoBehaviour
     public int wave;
 
     [SerializeField] Image currentBataryImage;
+    
     [SerializeField] Text bataryText;
 
     private void Start()
@@ -33,6 +34,7 @@ public class BaseManager : MonoBehaviour
     private void Update()
     {
         bataryText.text = currentBattery.ToString() +" / "+batteryVolume +" kW/h";
+       
         currentBataryImage.fillAmount = (float)currentBattery / batteryVolume;
 
     }
