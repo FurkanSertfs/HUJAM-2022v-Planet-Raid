@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildResources:
   - resourcesType: 0
-    resourcesCount: 5
+    resourcesCount: 0
   - resourcesType: 1
-    resourcesCount: 3
-  buildPreview: {fileID: 5542067386217325713, guid: 93dc707744512c348b7775a7d1164382, type: 3}
-  buildPrefab: {fileID: 8545187203791352639, guid: 662f8fd09cf4640428f8df77dac4b7ba, type: 3}
+    resourcesCount: 0
+  buildPreview: {fileID: 3299421319889821696, guid: 9df20d48258c34c48ace2d4aaf4926de, type: 3}
+  buildPrefab: {fileID: 3299421319889821696, guid: e76154eb949b6834d9d9fa1942904376, type: 3}
   health: 30
