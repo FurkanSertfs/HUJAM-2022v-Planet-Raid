@@ -31,11 +31,11 @@ public class EnemySpawner : MonoBehaviour
 
         spawnedEnemy++;
 
-   
-
-      
-
-        StartCoroutine(Spawn());
+        if (spawnedEnemy < sizeOfWave)
+        {
+            StartCoroutine(Spawn());
+        }
+       
 
         
         

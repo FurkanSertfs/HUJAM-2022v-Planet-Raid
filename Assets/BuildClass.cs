@@ -15,7 +15,7 @@ public class BuildClass : ScriptableObject
 
     public GameObject buildPrefab;
 
-   
+    public int health;
 }
 
 [System.Serializable]
