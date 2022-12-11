@@ -1087,6 +1087,7 @@ MonoBehaviour:
   mainBase: {fileID: 0}
   target: {fileID: 0}
   attackables: []
+  isAttacking: 0
 --- !u!1 &670837393
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,6 +2546,7 @@ MonoBehaviour:
   generatorCount: 0
   batteryVolume: 5000
   currentBattery: 0
+  wave: 0
   currentBataryImage: {fileID: 630313191}
   bataryText: {fileID: 1909416007}
 --- !u!4 &1787760617
@@ -2826,6 +2828,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 717295d8a16ae594fb9164bfa5fd9b20, type: 3}
   m_PrefabInstance: {fileID: 1821448657}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1859508492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d5887c40f9002634a8bcf1ccf6c0f212, type: 3}
+  m_PrefabInstance: {fileID: 35806528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1859508494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859508492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0472a80a7e625488ac812d9fad66fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 0}
+  spawnPoints: []
+  coolDown: 0
+  sizeOfWave: 0
+  spawnedEnemy: 0
 --- !u!1 &1909416006
 GameObject:
   m_ObjectHideFlags: 0
@@ -4928,7 +4952,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4416926083347132227}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed9f0264514dae4458f983a937f1be45, type: 3}
   m_Name: 

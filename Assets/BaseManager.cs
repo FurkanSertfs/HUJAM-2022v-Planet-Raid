@@ -14,6 +14,8 @@ public class BaseManager : MonoBehaviour
 
     public int currentBattery;
 
+    public int wave;
+
     [SerializeField] Image currentBataryImage;
     [SerializeField] Text bataryText;
 
