@@ -20,30 +20,33 @@ public class BuildSystem : MonoBehaviour
 
     void Update()
     {
-      
-        if (Input.GetKeyDown(KeyCode.B))
 
+        if (!canBuild)
         {
-            if(!buildUserInterface.activeSelf)
+            if (Input.GetKeyDown(KeyCode.B))
+
             {
-                buildUserInterface.SetActive(true);
+                if (!buildUserInterface.activeSelf)
+                {
+                    buildUserInterface.SetActive(true);
+                }
+
+                else
+                {
+                    buildUserInterface.SetActive(false);
+                }
+
             }
 
-            else
+            else if (Input.GetKeyDown(KeyCode.Escape))
             {
                 buildUserInterface.SetActive(false);
             }
-           
-        }
 
-        else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            buildUserInterface.SetActive(false);
-        }
-
-        if (canBuild)
-        {
-            PlaceBuild();
+            if (canBuild)
+            {
+                PlaceBuild();
+            }
         }
        
         
