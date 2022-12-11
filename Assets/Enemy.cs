@@ -28,9 +28,13 @@ public class Enemy : MonoBehaviour
 
     float scaleFactor;
 
+    bool touchedEnemy;
+
+    GameObject touchedEnemyObject;
+
     private void OnEnable()
     {
-        int randomEnemy = Random.Range(0, enemyTypes.Count);
+        int randomEnemy = Random.Range(0, Mathf.Min(BaseManager.instance.wave * 2, enemyTypes.Count));
 
         enemyTypes[randomEnemy].prefab.SetActive(true);
         enemyTypes[randomEnemy].weraponPrefab.SetActive(true);
@@ -103,13 +107,14 @@ public class Enemy : MonoBehaviour
 
     }
 
-    public void Attack(GameObject gameObject)
-    {
-        if (isAttacking)
-        {
-            gameObject.GetComponent<IAttackable>().Hit(damage);
+    
 
-        }
+
+    public void Attack( )
+    {
+
+        touchedEnemyObject.GetComponent<IAttackable>().Hit(damage);
+
 
     }
 
@@ -168,8 +173,20 @@ public class Enemy : MonoBehaviour
     }
     public bool CheckArrive()
     {
+        if (touchedEnemy)
+        {
+            Debug.Log("True");
 
-        if (agent.hasPath && agent.remainingDistance < 0.1f)
+            animator.SetBool("isAttack", true);
+
+            agent.isStopped = true;
+
+            agent.ResetPath();
+
+            return true;
+        }
+
+        if (agent.hasPath && agent.remainingDistance < 0.5f)
         {
             animator.SetBool("isAttack", true);
 
@@ -182,7 +199,7 @@ public class Enemy : MonoBehaviour
 
         }
 
-        else if (agent.hasPath && agent.remainingDistance > 0.25f)
+        else if (agent.hasPath && agent.remainingDistance >= 0.5f)
         {
             agent.isStopped = false;
 
@@ -195,14 +212,14 @@ public class Enemy : MonoBehaviour
 
     }
 
-   
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<IAttackable>() !=null)
+        if (other.GetComponent<IAttackable>() != null)
         {
-            attackables.Add(other.gameObject);
+            touchedEnemy = true;
+            touchedEnemyObject = other.gameObject;
         }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -210,9 +227,13 @@ public class Enemy : MonoBehaviour
 
         if (other.GetComponent<IAttackable>() != null)
         {
-            attackables.Remove(other.gameObject);
+            touchedEnemy = false;
         }
     }
+
+
+
+
 
 }
 

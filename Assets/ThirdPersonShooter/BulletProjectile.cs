@@ -6,6 +6,7 @@ public class BulletProjectile : MonoBehaviour {
 
     [SerializeField] private Transform vfxHitGreen;
     [SerializeField] private Transform vfxHitRed;
+    [SerializeField] private Transform vfxHitBlood;
 
     private Rigidbody bulletRigidbody;
 
@@ -36,6 +37,7 @@ public class BulletProjectile : MonoBehaviour {
         else if (other.GetComponent<Enemy>() != null)
         {
             Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
+            Instantiate(vfxHitBlood, transform.position, Quaternion.identity);
             other.GetComponent<Enemy>().Hit();
         }
 
