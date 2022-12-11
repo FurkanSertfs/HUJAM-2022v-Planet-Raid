@@ -20,6 +20,9 @@ public class ThirdPersonShooterController : MonoBehaviour {
     [SerializeField] private Transform gunPosition;
     [SerializeField] private int bulletCost;
 
+    public AudioSource ShotSongs;
+
+
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
@@ -87,6 +90,8 @@ public class ThirdPersonShooterController : MonoBehaviour {
                 Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
                 //*/
                 starterAssetsInputs.shoot = false;
+                ShotSongs.pitch = (Random.Range(0.7f, 0.9f));
+                ShotSongs.Play();
                 manager.currentBattery -= bulletCost;
             }
 
