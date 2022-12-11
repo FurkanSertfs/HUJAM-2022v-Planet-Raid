@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using UnityEngine.AI;
 
 
@@ -9,7 +10,7 @@ public class Enemy : MonoBehaviour
     [NonReorderable]
     public List<EnemyType> enemyTypes = new List<EnemyType>();
     
-    int health;
+    [SerializeField] int health;
 
     int damage;
 
@@ -24,7 +25,8 @@ public class Enemy : MonoBehaviour
     public List<GameObject> attackables = new List<GameObject>();
 
     public bool isAttacking;
-    
+
+    float scaleFactor;
 
     private void OnEnable()
     {
@@ -33,6 +35,7 @@ public class Enemy : MonoBehaviour
         enemyTypes[randomEnemy].prefab.SetActive(true);
         enemyTypes[randomEnemy].weraponPrefab.SetActive(true);
         transform.localScale *= enemyTypes[randomEnemy].scaleFactor;
+        scaleFactor = enemyTypes[randomEnemy].scaleFactor;
         health = enemyTypes[randomEnemy].health;
         damage = enemyTypes[randomEnemy].damage;
 
@@ -42,11 +45,12 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if (health>0)
+        if (health > 0)
         {
             if (target == null)
             {
@@ -54,7 +58,7 @@ public class Enemy : MonoBehaviour
                 if (!CheckArrive())
                 {
                     SelectTarget();
-                    if (!mainBase)
+                    if (mainBase!=null)
                     {
                         GotoTarget(mainBase.position);
 
@@ -75,14 +79,27 @@ public class Enemy : MonoBehaviour
 
         else
         {
-            agent.isStopped = true;
+            if (agent)
+            {
+                agent.isStopped = true;
 
-            agent.ResetPath();
+                agent.ResetPath();
 
-            animator.SetBool("isDying", true);
+                animator.SetBool("isDying", true);
+            }
+          
 
+            Destroy(agent);
+
+            
         }
-        
+
+
+    }
+    public void Death()
+    {
+
+        Destroy(gameObject);
 
     }
 
@@ -125,7 +142,17 @@ public class Enemy : MonoBehaviour
     public void Hit()
     {
         health -=10;
+
+        transform.DOShakeScale(0.2f,0.2f,16,90,true).OnComplete(()=> 
         
+        {
+            if (transform.localScale.x != scaleFactor)
+            {
+                transform.DOScale(new Vector3(scaleFactor, scaleFactor, scaleFactor),0.05f);
+
+            }
+
+        });
        
 
     }

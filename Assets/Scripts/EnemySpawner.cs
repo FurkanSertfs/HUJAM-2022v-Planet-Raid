@@ -18,6 +18,8 @@ public class EnemySpawner : MonoBehaviour
         sizeOfWave = Mathf.CeilToInt(Mathf.Pow(BaseManager.instance.wave, 1.4f) + 5 + Mathf.Sin(BaseManager.instance.wave));
 
         coolDown = (8 / (Mathf.Pow(BaseManager.instance.wave, 1.2f) + 2 + Mathf.Sin(BaseManager.instance.wave)));
+
+        StartCoroutine(Spawn());
     }
     private void Update()
     {
