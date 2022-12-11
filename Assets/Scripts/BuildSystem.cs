@@ -43,13 +43,15 @@ public class BuildSystem : MonoBehaviour
                 buildUserInterface.SetActive(false);
             }
 
-            if (canBuild)
-            {
-                PlaceBuild();
-            }
+            
         }
-       
-        
+
+        if (canBuild)
+        {
+            PlaceBuild();
+        }
+
+
 
     }
 
