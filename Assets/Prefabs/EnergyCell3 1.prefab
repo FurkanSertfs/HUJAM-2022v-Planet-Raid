@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1640484673822520476}
   - component: {fileID: 6839871263331434158}
   - component: {fileID: 2400104266671314808}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Pod_Silo_04.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 2410618027828153738}
   - component: {fileID: 1960465107643235499}
   - component: {fileID: 2726015144505909183}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Pod_Silo_04.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 271691923767290647}
   - component: {fileID: 7016875395836038645}
   - component: {fileID: 5646972752308750805}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Pod_Silo_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 5142866969683998261}
   - component: {fileID: 239615425270367523}
   - component: {fileID: 7816773735302308376}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Pod_Silo_04.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7171861864156402109}
-  m_Layer: 0
+  - component: {fileID: -521025639722755637}
+  - component: {fileID: 154496691666776837}
+  - component: {fileID: -7328062409902363532}
+  m_Layer: 7
   m_Name: EnergyCell3 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -350,7 +353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7551484284985854727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.926457, y: 0.049999952, z: -5.493637}
+  m_LocalPosition: {x: -6.4177704, y: -0.01083132, z: 16.812698}
   m_LocalScale: {x: 0.5, y: 0.25, z: 0.5}
   m_Children:
   - {fileID: 271691923767290647}
@@ -362,6 +365,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-521025639722755637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7551484284985854727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 265dd87abf3afd04f88341cafb5c5f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+--- !u!65 &154496691666776837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7551484284985854727}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.147851, y: 12.307095, z: 8.289911}
+  m_Center: {x: 0.23235941, y: 5.6535473, z: -0.6360483}
+--- !u!114 &-7328062409902363532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7551484284985854727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c87bea350807c498ea2a0f09c4c6c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7821527897189151874
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +414,7 @@ GameObject:
   - component: {fileID: 4852748406491017648}
   - component: {fileID: 2521237098663356323}
   - component: {fileID: 4196252849084853375}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Pod_Silo_04.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +495,7 @@ GameObject:
   - component: {fileID: 3188544837522273311}
   - component: {fileID: 6836893080949999611}
   - component: {fileID: 7836688412411459416}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Pod_Silo_04.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}

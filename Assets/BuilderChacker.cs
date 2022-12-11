@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BuilderChacker : MonoBehaviour
 {
-    MeshRenderer renderer;
+    MeshRenderer[] renderer;
 
     Material[] startMaterials;
 
@@ -14,18 +14,28 @@ public class BuilderChacker : MonoBehaviour
 
     private void Start()
     {
-        renderer = GetComponentInChildren<MeshRenderer>();
+        renderer = GetComponentsInChildren<MeshRenderer>();
         canBuild = true;
-        startMaterials = renderer.materials ;
+
+        for (int i = 0; i < renderer.Length; i++)
+        {
+            startMaterials = renderer[i].materials;
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.GetComponent<Build>()!=null)
         {
+            Debug.Log("Builds");
 
             canBuild = false;
-            renderer.materials = redMatirial;
+
+            for (int i = 0; i < renderer.Length; i++)
+            {
+                renderer[i].materials= redMatirial;
+            }
+          
         }
            
         
@@ -37,7 +47,14 @@ public class BuilderChacker : MonoBehaviour
         {
 
             canBuild = true;
-            renderer.materials = startMaterials;
+
+
+            for (int i = 0; i < renderer.Length; i++)
+            {
+                renderer[i].materials = startMaterials;
+            }
+
+          
         }
 
 

@@ -331,5 +331,11 @@ namespace StarterAssets
         {
             _rotateOnMove = newRotateOnMove;
         }
-	}
+
+        private void OnDisable()
+        {
+			_animator.SetFloat("Speed", 0);
+
+		}
+    }
 }

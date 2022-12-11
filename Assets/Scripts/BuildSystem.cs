@@ -6,7 +6,7 @@ public class BuildSystem : MonoBehaviour
 {
     [SerializeField] LayerMask buildLayer;
      GameObject buildPreview;
-     GameObject build;
+     GameObject buildPrefab;
 
     [SerializeField] GameObject buildUserInterface;
 
@@ -15,6 +15,8 @@ public class BuildSystem : MonoBehaviour
     bool canBuild;
 
     int health;
+
+
 
     void Update()
     {
@@ -62,9 +64,9 @@ public class BuildSystem : MonoBehaviour
             {
                 if (buildPreview.GetComponent<BuilderChacker>().canBuild)
                 {
-                    GameObject spawnBuild = Instantiate(build, hit.point, Quaternion.Euler(new Vector3(0, -90, -90)));
+                    GameObject spawnBuild = Instantiate(buildPrefab, hit.point, buildPreview.transform.rotation);
 
-                    spawnBuild.transform.Rotate(0f, -90f, 0f);
+               
 
                     spawnBuild.GetComponent<Build>().health = health;
 
@@ -119,6 +121,8 @@ public class BuildSystem : MonoBehaviour
                 }
             }
 
+            buildPreview = Instantiate(build.buildPreview,Vector3.zero,new Quaternion(0,0,0,0));
+            buildPrefab = build.buildPrefab;
 
             buildUserInterface.SetActive(false);
 
