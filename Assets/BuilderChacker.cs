@@ -8,7 +8,9 @@ public class BuilderChacker : MonoBehaviour
 
     List<MaterialArray> startMaterials = new List<MaterialArray>();
 
-    [SerializeField] Material[] redMatirial;
+    [SerializeField] Material redMatirial;
+
+    List<Material> Redmaterials = new List<Material>();
 
     public bool canBuild;
 
@@ -16,6 +18,11 @@ public class BuilderChacker : MonoBehaviour
     {
         renderer = GetComponentsInChildren<MeshRenderer>();
         canBuild = true;
+
+        for (int i = 0; i < 4; i++)
+        {
+            Redmaterials.Add(redMatirial);
+        }
 
         for (int i = 0; i < renderer.Length; i++)
         {
@@ -34,7 +41,7 @@ public class BuilderChacker : MonoBehaviour
 
             for (int i = 0; i < renderer.Length; i++)
             {
-                renderer[i].materials= redMatirial;
+                renderer[i].materials= Redmaterials.ToArray();
             }
           
         }
