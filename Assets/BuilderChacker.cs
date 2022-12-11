@@ -33,9 +33,9 @@ public class BuilderChacker : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.GetComponent<Build>()!=null)
+        if (other.GetComponent<CantBuildHere>()!=null)
         {
-            Debug.Log("Builds");
+           
 
             canBuild = false;
 
@@ -51,7 +51,7 @@ public class BuilderChacker : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<Build>() != null)
+        if (other.GetComponent<CantBuildHere>() != null)
         {
 
             canBuild = true;

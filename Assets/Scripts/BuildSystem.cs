@@ -61,7 +61,7 @@ public class BuildSystem : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, 10, buildLayer))
+        if (Physics.Raycast(ray, out RaycastHit hit, 30, buildLayer))
         {
             buildPreview.transform.position = hit.point;
 
