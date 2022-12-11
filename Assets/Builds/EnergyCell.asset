@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b3ae5adf933a6844b52d6ff30be7c81, type: 3}
-  m_Name: Generator
+  m_Name: EnergyCell
   m_EditorClassIdentifier: 
   buildResources:
   - resourcesType: 0
     resourcesCount: 5
   - resourcesType: 1
     resourcesCount: 3
-  buildPreview: {fileID: 5542067386217325713, guid: 93dc707744512c348b7775a7d1164382, type: 3}
-  buildPrefab: {fileID: 8545187203791352639, guid: 662f8fd09cf4640428f8df77dac4b7ba, type: 3}
+  buildPreview: {fileID: 7551484284985854727, guid: 71e01b7ea435f7842be26dfcdc70e451, type: 3}
+  buildPrefab: {fileID: 7551484284985854727, guid: 642b0c806b0501948ba219f70de944ae, type: 3}
   health: 30

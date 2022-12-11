@@ -15,6 +15,9 @@ public class Mine : MonoBehaviour
     MeshRenderer meshRenderer;
     int startHealth;
 
+    public AudioSource MineSource;
+
+
     private void Start()
     {
         startHealth = health;
@@ -29,6 +32,10 @@ public class Mine : MonoBehaviour
         health--;
 
         int randomPoint;
+
+        MineSource.pitch = (Random.Range(0.8f, 1.1f));
+
+        MineSource.Play();
 
         for (int i = 0; i < spawnCount; i++)
         {
