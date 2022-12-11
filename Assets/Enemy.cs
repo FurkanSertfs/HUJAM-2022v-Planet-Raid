@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour
     public GameObject target;
 
     public List<GameObject> attackables = new List<GameObject>();
+
+    public bool isAttacking;
     
 
     private void OnEnable()
@@ -52,7 +54,11 @@ public class Enemy : MonoBehaviour
                 if (!CheckArrive())
                 {
                     SelectTarget();
-                    GotoTarget(mainBase.position);
+                    if (!mainBase)
+                    {
+                        GotoTarget(mainBase.position);
+
+                    }
                 }
 
             }
@@ -66,6 +72,7 @@ public class Enemy : MonoBehaviour
                 }
             }
         }
+
         else
         {
             agent.isStopped = true;
@@ -79,8 +86,13 @@ public class Enemy : MonoBehaviour
 
     }
 
-    public void Attack()
+    public void Attack(GameObject gameObject)
     {
+        if (isAttacking)
+        {
+            gameObject.GetComponent<IAttackable<int>>().Hit(damage);
+
+        }
 
     }
 
@@ -112,6 +124,9 @@ public class Enemy : MonoBehaviour
 
     public void Hit()
     {
+        health -=10;
+        
+       
 
     }
 

@@ -31,6 +31,12 @@ public class BulletProjectile : MonoBehaviour {
             other.GetComponent<Mine>().Hit();
         }
 
+        else if (other.GetComponent<Enemy>() != null)
+        {
+            Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
+            other.GetComponent<Mine>().Hit();
+        }
+
         else 
         
         {
