@@ -6,7 +6,7 @@ public class BuilderChacker : MonoBehaviour
 {
     MeshRenderer[] renderer;
 
-    Material[] startMaterials;
+    List<MaterialArray> startMaterials = new List<MaterialArray>();
 
     [SerializeField] Material[] redMatirial;
 
@@ -19,7 +19,8 @@ public class BuilderChacker : MonoBehaviour
 
         for (int i = 0; i < renderer.Length; i++)
         {
-            startMaterials = renderer[i].materials;
+            startMaterials.Add(new MaterialArray());
+            startMaterials[i].startMaterials = renderer[i].materials;
         }
     }
 
@@ -51,7 +52,7 @@ public class BuilderChacker : MonoBehaviour
 
             for (int i = 0; i < renderer.Length; i++)
             {
-                renderer[i].materials = startMaterials;
+                renderer[i].materials = startMaterials[i].startMaterials;
             }
 
           
@@ -59,4 +60,9 @@ public class BuilderChacker : MonoBehaviour
 
 
     }
+}
+[System.Serializable]
+public class MaterialArray
+{
+   public Material[] startMaterials;
 }
