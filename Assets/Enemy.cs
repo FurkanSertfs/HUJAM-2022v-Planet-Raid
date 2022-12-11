@@ -7,7 +7,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    [NonReorderable]
+    
     public List<EnemyType> enemyTypes = new List<EnemyType>();
     
     [SerializeField] int health;
