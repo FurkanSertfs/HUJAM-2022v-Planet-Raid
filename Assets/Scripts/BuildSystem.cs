@@ -5,53 +5,126 @@ using UnityEngine;
 public class BuildSystem : MonoBehaviour
 {
     [SerializeField] LayerMask buildLayer;
-    public GameObject Tower;
-    public GameObject TowerPrev;
+     GameObject buildPreview;
+     GameObject build;
 
+    [SerializeField] GameObject buildUserInterface;
 
-    public bool BuildUI = false;    
+    public bool BuildUI = false;
+
+    bool canBuild;
    
 
     void Update()
     {
       
         if (Input.GetKeyDown(KeyCode.B))
+
         {
-            BuildUI = !BuildUI;
+            if(!buildUserInterface.activeSelf)
+            {
+                buildUserInterface.SetActive(true);
+            }
+
+            else
+            {
+                buildUserInterface.SetActive(false);
+            }
+           
         }
 
-        if (BuildUI == true)
+        else if (Input.GetKeyDown(KeyCode.Escape))
         {
-           
-            
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            buildUserInterface.SetActive(false);
+        }
 
-            if (Physics.Raycast(ray, out RaycastHit hit, 100,buildLayer))
+        if (canBuild)
+        {
+            PlaceBuild();
+        }
+       
+        
+
+    }
+
+ 
+
+    void PlaceBuild()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(ray, out RaycastHit hit, 100, buildLayer))
+        {
+            buildPreview.transform.position = hit.point;
+
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-               TowerPrev.transform.position = hit.point;
-               
-                if (Input.GetKeyDown(KeyCode.Mouse0))
+                if (buildPreview.GetComponent<BuilderChacker>().canBuild)
                 {
-                    if (TowerPrev.GetComponent<BuilderChacker>().canBuild)
-                    {
-                        GameObject spawnPositon = Instantiate(Tower, hit.point, Quaternion.Euler(new Vector3(0, -90, -90)));
-                        spawnPositon.transform.Rotate(0f, -90f, 0f);
+                    GameObject spawnPositon = Instantiate(build, hit.point, Quaternion.Euler(new Vector3(0, -90, -90)));
+                    
+                    spawnPositon.transform.Rotate(0f, -90f, 0f);
 
-                    }
+                    Destroy(buildPreview);
 
-
-                   
+                    canBuild = false;
 
                 }
 
+
+
+
             }
+
         }
     }
-    public void OpenUI()
-    {
 
-        BuildUI = true;
-        
+
+    public void BuyBuild(BuildClass build)
+    {
+        bool haveResources = true;
+
+        for (int i = 0; i < Player.instance.resources.Length; i++)
+        {
+            for (int j = 0; j < build.buildResources.Count; j++)
+            {
+                if (build.buildResources[j].resourcesType == Player.instance.resources[i].resourcesType)
+                {
+                    if (build.buildResources[j].resourcesCount > Player.instance.resources[i].Count)
+                    {
+                        haveResources = false;
+                        break;
+                    }
+
+                }
+            }
+        }
+
+
+
+        if (haveResources)
+        {
+            for (int i = 0; i < Player.instance.resources.Length; i++)
+            {
+                for (int j = 0; j < build.buildResources.Count; j++)
+                {
+                    if (build.buildResources[j].resourcesType == Player.instance.resources[i].resourcesType)
+                    {
+                         Player.instance.resources[i].Count-=build.buildResources[j].resourcesCount;
+
+                    }
+                }
+            }
+
+
+            buildUserInterface.SetActive(false);
+           
+            canBuild = true;
+        }
+
     }
+
+
+   
         
 }

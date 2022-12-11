@@ -66,8 +66,7 @@ public class ThirdPersonShooterController : MonoBehaviour {
             transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
             //  spine.transform.forward = Vector3.Lerp(spine.transform.forward, spineAimDirection, Time.deltaTime * 20f);
 
-
-          
+           
         } 
         
         else 

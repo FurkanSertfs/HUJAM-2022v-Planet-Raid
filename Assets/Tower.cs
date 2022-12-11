@@ -81,8 +81,19 @@ public class Tower : MonoBehaviour
     {
         if (enemies.Count>0)
         {
-            target = enemies[0].transform;
+            if (enemies[0].gameObject !=null)
+            {
+                target = enemies[0].transform;
+            }
+            else
+            {
+                enemies.RemoveAt(0);
+                target = null;
+            }
+
+            
         }
+
         else
         {
             target = null;
