@@ -90,7 +90,7 @@ public class Enemy : MonoBehaviour
     {
         if (isAttacking)
         {
-            gameObject.GetComponent<IAttackable<int>>().Hit(damage);
+            gameObject.GetComponent<IAttackable>().Hit(damage);
 
         }
 
@@ -172,7 +172,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<IAttackable<int>>() !=null)
+        if (other.GetComponent<IAttackable>() !=null)
         {
             attackables.Add(other.gameObject);
         }
@@ -181,7 +181,7 @@ public class Enemy : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
 
-        if (other.GetComponent<IAttackable<int>>() != null)
+        if (other.GetComponent<IAttackable>() != null)
         {
             attackables.Remove(other.gameObject);
         }

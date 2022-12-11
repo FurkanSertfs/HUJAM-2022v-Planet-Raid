@@ -13,7 +13,8 @@ public class BuildSystem : MonoBehaviour
     public bool BuildUI = false;
 
     bool canBuild;
-   
+
+    int health;
 
     void Update()
     {
@@ -61,9 +62,11 @@ public class BuildSystem : MonoBehaviour
             {
                 if (buildPreview.GetComponent<BuilderChacker>().canBuild)
                 {
-                    GameObject spawnPositon = Instantiate(build, hit.point, Quaternion.Euler(new Vector3(0, -90, -90)));
-                    
-                    spawnPositon.transform.Rotate(0f, -90f, 0f);
+                    GameObject spawnBuild = Instantiate(build, hit.point, Quaternion.Euler(new Vector3(0, -90, -90)));
+
+                    spawnBuild.transform.Rotate(0f, -90f, 0f);
+
+                    spawnBuild.GetComponent<Build>().health = health;
 
                     Destroy(buildPreview);
 
@@ -118,7 +121,9 @@ public class BuildSystem : MonoBehaviour
 
 
             buildUserInterface.SetActive(false);
-           
+
+            health = build.health;
+             
             canBuild = true;
         }
 

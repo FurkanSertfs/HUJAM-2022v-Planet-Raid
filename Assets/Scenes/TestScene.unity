@@ -544,7 +544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c9de7f431473b945b40c4aa451ad672, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.493637
+      value: -6.66
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c9de7f431473b945b40c4aa451ad672, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5285,6 +5285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectPoint: {fileID: 1147575249}
+  health: 0
   resources:
   - resourcesType: 0
     Count: 0
