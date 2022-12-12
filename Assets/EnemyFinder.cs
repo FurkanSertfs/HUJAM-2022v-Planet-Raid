@@ -13,9 +13,16 @@ public class EnemyFinder : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+        
+
         if (other.GetComponent<IAttackable>() != null)
         {
             enemy.attackables.Add(other.gameObject);
+        }
+        else if (other.GetComponent<BaseManager>() != null)
+        {
+
         }
 
     }
