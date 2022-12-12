@@ -84,7 +84,7 @@ public class ThirdPersonShooterController : MonoBehaviour {
         if (starterAssetsInputs.shoot&&starterAssetsInputs.aim) 
         
         {
-            if (manager.currentBattery>bulletCost)
+            if (manager.currentBattery>=bulletCost)
             {
                 Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
                 Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));

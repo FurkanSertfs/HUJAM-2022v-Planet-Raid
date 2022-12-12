@@ -41,6 +41,11 @@ public class BaseManager : MonoBehaviour
        
         currentBataryImage.fillAmount = (float)currentBattery / batteryVolume;
 
+        if (currentBattery >= batteryVolume)
+        {
+            currentBattery = batteryVolume;
+        }
+
     }
 
 
@@ -49,7 +54,7 @@ public class BaseManager : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        currentBattery += generatorCount * 50;
+        currentBattery += generatorCount;
 
         StartCoroutine(ElectricityGeneration());
 

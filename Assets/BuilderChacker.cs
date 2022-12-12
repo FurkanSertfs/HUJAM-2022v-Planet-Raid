@@ -33,7 +33,7 @@ public class BuilderChacker : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log(other.gameObject.name);
+       
 
         if (other.GetComponent<CantBuildHere>()!=null)
         {

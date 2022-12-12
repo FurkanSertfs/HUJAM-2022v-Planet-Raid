@@ -2410,7 +2410,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -73.66443, y: -89.0036}
+  m_AnchoredPosition: {x: -73.66455, y: -89.00366}
   m_SizeDelta: {x: -1204, y: -984}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &620410898
@@ -3902,6 +3902,98 @@ Transform:
   m_Father: {fileID: 1262462346}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &929276767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929276768}
+  - component: {fileID: 929276771}
+  - component: {fileID: 929276770}
+  - component: {fileID: 929276769}
+  m_Layer: 5
+  m_Name: GeneratorInteraction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &929276768
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929276767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1235099368920957988}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 127, y: -357}
+  m_SizeDelta: {x: 387.66, y: 79.2757}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &929276769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929276767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f6b125f8f600d4aad63d14dd726efe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &929276770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929276767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c73bb9a604a701f41b5989b08c514bbd, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Press E to Fill the Generator
+--- !u!222 &929276771
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929276767}
+  m_CullTransparentMesh: 1
 --- !u!1 &937875292
 GameObject:
   m_ObjectHideFlags: 0
@@ -4681,7 +4773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2112546168510050217, guid: e932c61993224ea4488aa44bb78a254d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2112546168510050218, guid: e932c61993224ea4488aa44bb78a254d, type: 3}
       propertyPath: m_IsActive
@@ -7484,8 +7576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd5dc1058367be468ee0d44f227010d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generatorCount: 1
-  batteryVolume: 5000
+  generatorCount: 10
+  batteryVolume: 250
   currentBattery: 0
   wave: 1
   currentBataryImage: {fileID: 1235099369984466572}
@@ -9740,6 +9832,7 @@ RectTransform:
   - {fileID: 1235099369684897191}
   - {fileID: 1297784807}
   - {fileID: 1889469082}
+  - {fileID: 929276768}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11619,6 +11712,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectPoint: {fileID: 870056065}
+  generatorInteractionText: {fileID: 929276770}
+  mineResources: {fileID: 5972049655999108415, guid: 8568f0955a2fc674991b7590d97ee365, type: 3}
   health: 0
   resources:
   - resourcesType: 0

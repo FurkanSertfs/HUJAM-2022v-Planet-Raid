@@ -56,31 +56,68 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+
+
+
+
+
+
+
+
+
         if (health > 0)
         {
-            if (target == null)
-            {
 
-                if (!CheckArrive())
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1.5f);
+            foreach (var hitCollider in hitColliders)
+            {
+                if (hitCollider.GetComponent<IAttackable>()!=null)
                 {
-                    SelectTarget();
-                    if (mainBase!=null)
+                    touchedEnemy = true;
+                    touchedEnemyObject = hitCollider.gameObject;
+
+
+                    animator.SetBool("isAttack", true);
+
+                    agent.isStopped = true;
+
+                    agent.ResetPath();
+                }
+                else
+                {
+                    touchedEnemy = false;
+                    touchedEnemyObject = null;
+
+                    if (target == null)
                     {
-                        GotoTarget(mainBase.position);
+
+                        if (!CheckArrive())
+                        {
+                            SelectTarget();
+                            if (mainBase != null)
+                            {
+                                GotoTarget(mainBase.position);
+
+                            }
+                        }
 
                     }
-                }
 
+                    else
+                    {
+                        if (!CheckArrive())
+                        {
+
+                            GotoTarget(target.transform.position);
+                        }
+                    }
+
+
+                }
+          
             }
 
-            else
-            {
-                if (!CheckArrive())
-                {
-
-                    GotoTarget(target.transform.position);
-                }
-            }
+            
         }
 
         else
@@ -180,18 +217,7 @@ public class Enemy : MonoBehaviour
     }
     public bool CheckArrive()
     {
-        if (touchedEnemy)
-        {
-           
-
-            animator.SetBool("isAttack", true);
-
-            agent.isStopped = true;
-
-            agent.ResetPath();
-
-            return true;
-        }
+        
 
         if (agent.hasPath && agent.remainingDistance < 0.5f)
         {
