@@ -9,6 +9,7 @@ public class BuildSystem : MonoBehaviour
      GameObject buildPrefab;
 
     [SerializeField] GameObject buildUserInterface;
+  
 
     public bool BuildUI = false;
 
@@ -29,6 +30,7 @@ public class BuildSystem : MonoBehaviour
                 if (!buildUserInterface.activeSelf)
                 {
                     buildUserInterface.SetActive(true);
+                  
                 }
 
                 else

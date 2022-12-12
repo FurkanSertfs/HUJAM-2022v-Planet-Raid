@@ -24,7 +24,7 @@ public class BaseManager : MonoBehaviour
 
     [SerializeField] Text waveText;
 
-    [SerializeField] Text moneyText;
+    [SerializeField] Text moneyText, moneyTextInMenu;
 
     private void Start()
     {
@@ -41,8 +41,10 @@ public class BaseManager : MonoBehaviour
     {
         bataryText.text = currentBattery.ToString() +" / "+batteryVolume +" kW/h";
 
-         // moneyText.text = money.ToString();
-       
+        moneyText.text = money.ToString();
+        moneyTextInMenu.text = money.ToString();
+        
+
         if (EnemySpawner.instance.startWave)
         {
             waveText.text = "Wave : " + wave.ToString();

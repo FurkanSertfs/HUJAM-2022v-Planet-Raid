@@ -11,6 +11,9 @@ public class Player : MonoBehaviour,IAttackable
     [SerializeField] Text generatorInteractionText;
     [SerializeField] GameObject mineResources;
     [SerializeField] Image croshair;
+    [SerializeField] Image healthBar;
+    [SerializeField] Text resourcesText;
+    
 
     public int resourcesCount;
     public int health;
@@ -26,6 +29,11 @@ public class Player : MonoBehaviour,IAttackable
 
     private void Update()
     {
+        healthBar.fillAmount = health / 100.0f;
+
+
+        resourcesText.text = resourcesCount.ToString();
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out RaycastHit hit2, 50))
