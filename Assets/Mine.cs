@@ -11,6 +11,7 @@ public class Mine : MonoBehaviour
     [SerializeField] int spawnCount;
     [SerializeField] float time;
     [SerializeField] int health;
+    [SerializeField] float respawnTime;
     BoxCollider collider;
     MeshRenderer meshRenderer;
     int startHealth;
@@ -61,7 +62,7 @@ public class Mine : MonoBehaviour
 
         if (health<=0)
         {
-            StartCoroutine(Respawn(4));
+            StartCoroutine(Respawn(respawnTime));
             meshRenderer.enabled = false;
             collider.isTrigger = true;
             

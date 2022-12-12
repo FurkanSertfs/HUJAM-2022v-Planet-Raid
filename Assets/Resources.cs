@@ -13,15 +13,9 @@ public class Resources : MonoBehaviour
         if (other.GetComponent<Player>()!=null)
         {
 
+            other.GetComponent<Player>().resourcesCount++;
 
-            for (int i = 0; i < other.GetComponent<Player>().resources.Length; i++)
-            {
-                if (resourcesType == other.GetComponent<Player>().resources[i].resourcesType)
-                {
-                   
-                    other.GetComponent<Player>().resources[i].Count++;
-                }
-            }
+
 
             Destroy(gameObject);
 
