@@ -1051,31 +1051,31 @@ MonoBehaviour:
     damage: 2
     fireSpeed: 5
   - prefab: {fileID: 7287836128210015402}
-    scaleFactor: 1
+    scaleFactor: 1.2
     weraponPrefab: {fileID: 7287650448411291347}
     health: 35
     damage: 20
     fireSpeed: 1.5
   - prefab: {fileID: 7287756735640795372}
-    scaleFactor: 1
+    scaleFactor: 1.3
     weraponPrefab: {fileID: 7288113549685288027}
     health: 40
     damage: 10
     fireSpeed: 1.5
   - prefab: {fileID: 7287133480699261622}
-    scaleFactor: 1
+    scaleFactor: 1.4
     weraponPrefab: {fileID: 7287172092425744766}
     health: 50
     damage: 20
     fireSpeed: 1.5
   - prefab: {fileID: 7287205062998323078}
-    scaleFactor: 1
+    scaleFactor: 1.5
     weraponPrefab: {fileID: 7287308278886033378}
     health: 60
     damage: 20
     fireSpeed: 1.2
   - prefab: {fileID: 7287346141074848496}
-    scaleFactor: 1
+    scaleFactor: 1.66
     weraponPrefab: {fileID: 7287710384259879296}
     health: 100
     damage: 20
@@ -1087,13 +1087,13 @@ MonoBehaviour:
     damage: 30
     fireSpeed: 1
   - prefab: {fileID: 7287557957599596764}
-    scaleFactor: 2
+    scaleFactor: 2.2
     weraponPrefab: {fileID: 7287707591365735481}
     health: 150
     damage: 50
     fireSpeed: 10
   - prefab: {fileID: 7287290495118487688}
-    scaleFactor: 2
+    scaleFactor: 2.3
     weraponPrefab: {fileID: 7287522418216942819}
     health: 200
     damage: 50
@@ -1105,7 +1105,7 @@ MonoBehaviour:
     damage: 50
     fireSpeed: 1
   - prefab: {fileID: 7287175902768333940}
-    scaleFactor: 4
+    scaleFactor: 2.5
     weraponPrefab: {fileID: 7287344474393980709}
     health: 300
     damage: 50

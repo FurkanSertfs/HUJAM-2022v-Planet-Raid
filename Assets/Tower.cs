@@ -8,7 +8,7 @@ public class Tower : MonoBehaviour
 
     [SerializeField] float fireRate;
 
-    Transform target;
+    Enemy target;
 
     [SerializeField] Transform spawnBulletPositionRight, spawnBulletPositionLeft;
     [SerializeField] Transform bulletProjectile;
@@ -16,6 +16,7 @@ public class Tower : MonoBehaviour
     [SerializeField] GameObject rightArm, leftArm;
     [SerializeField] Transform rightStartPoint, rightEndPoint, leftStartPoint, leftEndPoint; 
     [SerializeField] int fireCost;
+    [SerializeField] AudioSource audioSource;
 
     [SerializeField]  bool isFiring;
 
@@ -28,7 +29,7 @@ public class Tower : MonoBehaviour
 
     private void Update()
     {
-        if (target==null)
+        if (target== null ||  target.health <= 0)
         {
             SelectTarget();
 
@@ -38,7 +39,7 @@ public class Tower : MonoBehaviour
 
         else
         {
-            towerHead.transform.LookAt(target);
+            towerHead.transform.LookAt(target.gameObject.transform);
 
             Fire();
         }
@@ -48,7 +49,7 @@ public class Tower : MonoBehaviour
     IEnumerator LookAtStartRotation()
     {
         yield return new WaitForSeconds(1);
-        if (target==null)
+        if (target== null && target.health > 0)
         {
             towerHead.transform.DORotateQuaternion(startRotation, 0.5f);
 
@@ -73,7 +74,7 @@ public class Tower : MonoBehaviour
         yield return new WaitForSeconds(fireRate);
 
       
-        if (target!=null && BaseManager.instance.currentBattery >= fireCost)
+        if (target!=null && BaseManager.instance.currentBattery >= fireCost && target.health > 0)
         {
             Vector3 aimDir = (target.GetComponent<Enemy>().targetPoint.position - spawnBulletPositionRight.position).normalized;
 
@@ -81,18 +82,24 @@ public class Tower : MonoBehaviour
 
             BaseManager.instance.currentBattery -=fireCost;
 
+            audioSource.pitch = Random.Range(0.8f, 1);
+            audioSource.Play();
+
             rightArm.transform.DOMove(rightStartPoint.position, 0.1f).OnComplete(() =>
             {
                 rightArm.transform.DOMove(rightEndPoint.position, 0.1f).OnComplete(()=> 
                 
                 {
-                    if (target != null && BaseManager.instance.currentBattery >= fireCost)
+                    if (target != null && BaseManager.instance.currentBattery >= fireCost && target.health>0)
                     {
                         Vector3 aimDir = (target.GetComponent<Enemy>().targetPoint.position - spawnBulletPositionLeft.position).normalized;
 
                         Instantiate(bulletProjectile, spawnBulletPositionLeft.position, Quaternion.LookRotation(aimDir, Vector3.up));
 
                         BaseManager.instance.currentBattery -= fireCost;
+
+                        audioSource.pitch = Random.Range(0.8f, 1);
+                        audioSource.Play();
 
                         leftArm.transform.DOMove(leftStartPoint.position, 0.1f).OnComplete(() =>
                         {
@@ -141,7 +148,7 @@ public class Tower : MonoBehaviour
         {
             if (enemies[0] !=null)
             {
-                target = enemies[0].transform;
+                target = enemies[0];
             }
             else
             {

@@ -7,6 +7,7 @@ public class BulletProjectile : MonoBehaviour {
     [SerializeField] private Transform vfxHitGreen;
     [SerializeField] private Transform vfxHitRed;
     [SerializeField] private Transform vfxHitBlood;
+    [SerializeField] AudioSource enemyHit;
 
     private Rigidbody bulletRigidbody;
 
@@ -38,6 +39,11 @@ public class BulletProjectile : MonoBehaviour {
         {
             Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
             Instantiate(vfxHitBlood, transform.position, Quaternion.identity);
+            enemyHit.pitch = (Random.Range(0.8f, 1.1f));
+            enemyHit.Play();
+
+
+
             other.GetComponent<Enemy>().Hit();
         }
 
@@ -48,8 +54,8 @@ public class BulletProjectile : MonoBehaviour {
             // Hit something else
             Instantiate(vfxHitRed, transform.position, Quaternion.identity);
         }
-
-        Destroy(gameObject);
+        Destroy(this);
+        Destroy(gameObject,0.2f);
     }
 
 }

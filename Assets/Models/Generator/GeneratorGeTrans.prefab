@@ -175,7 +175,6 @@ GameObject:
   - component: {fileID: 2774840351218891450}
   - component: {fileID: -6268801352473811194}
   - component: {fileID: 5551383026140638113}
-  - component: {fileID: 1606419906862302069}
   - component: {fileID: 2446532691160041809}
   m_Layer: 7
   m_Name: GeneratorGeTrans
@@ -226,21 +225,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.430932, y: 1.2002579, z: 2.2544942}
-  m_Center: {x: -0.026458263, y: 0.69252235, z: 0.028146982}
---- !u!114 &1606419906862302069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3299421319889821696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 265dd87abf3afd04f88341cafb5c5f75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
+  m_Size: {x: 4.430932, y: 1.4911901, z: 2.2544942}
+  m_Center: {x: -0.026458263, y: 0.54705626, z: 0.028146982}
 --- !u!54 &2446532691160041809
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -253,7 +239,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

@@ -27,11 +27,13 @@ public class Build : MonoBehaviour , IAttackable
 
             }
 
+            if (health < 0)
+            {
+                Destroy(gameObject);
+            }
+
         });
 
-        if (health< 0)
-        {
-            Destroy(gameObject);
-        }
+       
     }
 }

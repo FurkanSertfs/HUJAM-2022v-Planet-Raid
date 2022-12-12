@@ -39,7 +39,7 @@ public class Player : MonoBehaviour,IAttackable
                     {
                         GameObject resource = Instantiate(mineResources, collectPoint.position,collectPoint.rotation);
 
-                        resource.transform.DOMove(hit.collider.GetComponent<Generator>().collectPoint.position,0.3f);
+                        resource.transform.DOMove(hit.collider.GetComponent<Generator>().collectPoint.position,0.45f);
 
                         timer =Time.time + 0.1f;
 

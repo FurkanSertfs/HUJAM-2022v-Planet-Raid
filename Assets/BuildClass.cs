@@ -9,7 +9,9 @@ using UnityEngine;
 public class BuildClass : ScriptableObject
 {
     [NonReorderable]
-    public List<BuildResources> buildResources = new List<BuildResources>();
+    //  public List<BuildResources> buildResources = new List<BuildResources>();
+
+    public int price;
 
     public GameObject buildPreview;
 

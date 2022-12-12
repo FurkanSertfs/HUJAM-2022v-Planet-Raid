@@ -97,41 +97,13 @@ public class BuildSystem : MonoBehaviour
 
     public void BuyBuild(BuildClass build)
     {
-        bool haveResources = true;
 
-        for (int i = 0; i < Player.instance.resources.Length; i++)
+        if (BaseManager.instance.money >= build.price)
         {
-            for (int j = 0; j < build.buildResources.Count; j++)
-            {
-                if (build.buildResources[j].resourcesType == Player.instance.resources[i].resourcesType)
-                {
-                    if (build.buildResources[j].resourcesCount > Player.instance.resources[i].Count)
-                    {
-                        haveResources = false;
-                        break;
-                    }
-
-                }
-            }
-        }
-
-
-
-        if (haveResources)
-        {
-            for (int i = 0; i < Player.instance.resources.Length; i++)
-            {
-                for (int j = 0; j < build.buildResources.Count; j++)
-                {
-                    if (build.buildResources[j].resourcesType == Player.instance.resources[i].resourcesType)
-                    {
-                         Player.instance.resources[i].Count-=build.buildResources[j].resourcesCount;
-
-                    }
-                }
-            }
+            BaseManager.instance.money -= build.price;
 
             buildPreview = Instantiate(build.buildPreview,Vector3.zero,new Quaternion(0,0,0,0));
+            
             buildPrefab = build.buildPrefab;
 
             buildUserInterface.SetActive(false);

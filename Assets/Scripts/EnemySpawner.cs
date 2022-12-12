@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static EnemySpawner instance;
+
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] Transform[] spawnPoints;
 
@@ -13,16 +15,30 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] List<GameObject> enemies = new List<GameObject>();
 
+    public bool startWave;
+    bool waveStarted;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
         sizeOfWave = Mathf.CeilToInt(Mathf.Pow(BaseManager.instance.wave, 1.4f) + 5 + Mathf.Sin(BaseManager.instance.wave));
 
         coolDown = (8 / (Mathf.Pow(BaseManager.instance.wave, 1.2f) + 2 + Mathf.Sin(BaseManager.instance.wave)));
 
-        StartCoroutine(Spawn());
+       
     }
     private void Update()
     {
+        if (startWave && !waveStarted)
+        {
+            waveStarted = true;
+            StartCoroutine(Spawn());
+        }
+
         if (spawnedEnemy>=sizeOfWave)
         {
             for (int i = 0; i < enemies.Count; i++)

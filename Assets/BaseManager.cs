@@ -16,11 +16,15 @@ public class BaseManager : MonoBehaviour
 
     public int wave;
 
+    public int money;
+
     [SerializeField] Image currentBataryImage;
     
     [SerializeField] Text bataryText;
 
     [SerializeField] Text waveText;
+
+    [SerializeField] Text moneyText;
 
     private void Start()
     {
@@ -37,8 +41,18 @@ public class BaseManager : MonoBehaviour
     {
         bataryText.text = currentBattery.ToString() +" / "+batteryVolume +" kW/h";
 
-        waveText.text = "Wave : " + wave.ToString();
+         // moneyText.text = money.ToString();
        
+        if (EnemySpawner.instance.startWave)
+        {
+            waveText.text = "Wave : " + wave.ToString();
+
+        }
+        else
+        {
+            waveText.text = "";
+        }
+
         currentBataryImage.fillAmount = (float)currentBattery / batteryVolume;
 
         if (currentBattery >= batteryVolume)

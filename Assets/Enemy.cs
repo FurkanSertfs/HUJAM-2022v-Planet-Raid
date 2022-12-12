@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     
     public List<EnemyType> enemyTypes = new List<EnemyType>();
     
-    [SerializeField] int health;
+    public int health;
 
     int damage;
 
@@ -30,13 +30,17 @@ public class Enemy : MonoBehaviour
 
     bool touchedEnemy;
 
-    GameObject touchedEnemyObject;
+    [SerializeField] GameObject touchedEnemyObject;
 
     public Transform targetPoint;
 
+    
+
     private void OnEnable()
     {
-        int randomEnemy = Random.Range(0, Mathf.Min(BaseManager.instance.wave * 2, enemyTypes.Count));
+          int randomEnemy = Random.Range(0, Mathf.Min(BaseManager.instance.wave * 2, enemyTypes.Count));
+
+       
 
         enemyTypes[randomEnemy].prefab.SetActive(true);
         enemyTypes[randomEnemy].weraponPrefab.SetActive(true);
@@ -44,6 +48,7 @@ public class Enemy : MonoBehaviour
         scaleFactor = enemyTypes[randomEnemy].scaleFactor;
         health = enemyTypes[randomEnemy].health;
         damage = enemyTypes[randomEnemy].damage;
+        
 
 
     }
@@ -59,39 +64,42 @@ public class Enemy : MonoBehaviour
 
 
 
-
-
-
-
-
-
         if (health > 0)
         {
 
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1.5f);
-            foreach (var hitCollider in hitColliders)
+
+            if (touchedEnemyObject==null)
             {
-                if (hitCollider.GetComponent<IAttackable>()!=null)
+                foreach (var hitCollider in hitColliders)
                 {
-                    touchedEnemy = true;
-                    touchedEnemyObject = hitCollider.gameObject;
-
-
-                    animator.SetBool("isAttack", true);
-
-                    agent.isStopped = true;
-
-                    agent.ResetPath();
-                }
-                else
-                {
-                    touchedEnemy = false;
-                    touchedEnemyObject = null;
-
-                    if (target == null)
+                    if (hitCollider.GetComponent<IAttackable>() != null)
                     {
+                        if (hitCollider != null)
+                        {
+                            touchedEnemy = true;
 
-                        if (!CheckArrive())
+                            touchedEnemyObject = hitCollider.gameObject;
+                            
+                            animator.SetBool("isAttack", true);
+
+                            agent.isStopped = true;
+
+                            agent.ResetPath();
+                        }
+
+
+                    }
+
+                    else
+                    {
+                        animator.SetBool("isAttack", false);
+
+                        touchedEnemy = false;
+
+                        touchedEnemyObject = null;
+
+                        if (target == null)
                         {
                             SelectTarget();
                             if (mainBase != null)
@@ -99,23 +107,33 @@ public class Enemy : MonoBehaviour
                                 GotoTarget(mainBase.position);
 
                             }
+
+
                         }
 
-                    }
-
-                    else
-                    {
-                        if (!CheckArrive())
+                        else
                         {
 
                             GotoTarget(target.transform.position);
+
                         }
+
+
                     }
 
-
                 }
-          
             }
+            else
+            {
+                touchedEnemy = true;
+
+                animator.SetBool("isAttack", true);
+
+                agent.isStopped = true;
+
+                agent.ResetPath();
+            }
+            
 
             
         }
@@ -152,12 +170,17 @@ public class Enemy : MonoBehaviour
 
     public void Attack( )
     {
+
+      
+
         if (touchedEnemyObject!=null)
         {
             touchedEnemyObject.GetComponent<IAttackable>().Hit(damage);
 
-        }
+            
 
+        }
+        touchedEnemyObject = null;
         touchedEnemy = false;
 
     }

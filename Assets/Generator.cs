@@ -14,6 +14,8 @@ public class Generator : MonoBehaviour
     [SerializeField] Image processingBar;
     [SerializeField] Text processingActive;
     [SerializeField] Text productionAmount;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] Animator animator;
 
     int progressCount;
 
@@ -23,12 +25,16 @@ public class Generator : MonoBehaviour
 
         if (resourcesCount>=1)
         {
+            animator.SetBool("isActive",true);
             processingActive.text = "Processing...";
             processingBar.fillAmount += Time.deltaTime;
             productionAmount.text = "+40 Kw/s";
 
             if (processingBar.fillAmount >= 1)
             {
+                audioSource.pitch = Random.Range(0.8f,1);
+                audioSource.Play();
+
                 processingBar.fillAmount = 0;
 
                 BaseManager.instance.currentBattery += 40;
@@ -46,6 +52,8 @@ public class Generator : MonoBehaviour
 
         else
         {
+            animator.SetBool("isActive", false);
+
             processingActive.text = "Missing resource !!!";
             productionAmount.text = "+0 Kw/s";
         }
