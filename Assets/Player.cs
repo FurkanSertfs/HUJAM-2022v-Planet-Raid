@@ -136,7 +136,7 @@ public class Player : MonoBehaviour,IAttackable
 
     public void StartGame()
     {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(1);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(2);
     }
 
     private void Awake()

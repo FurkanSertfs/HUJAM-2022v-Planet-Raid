@@ -5295,7 +5295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.8911, y: -0.3756}
+  m_AnchoredPosition: {x: 4.891098, y: -0.3756008}
   m_SizeDelta: {x: 79.7141, y: 34.6557}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &933500604
@@ -5475,10 +5475,10 @@ RectTransform:
   m_Father: {fileID: 367535866}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 313, y: -173.24}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchorMin: {x: 0.7392363, y: 0.031228917}
+  m_AnchorMax: {x: 0.9913701, y: 0.12886748}
+  m_AnchoredPosition: {x: -25.5, y: 1.2599792}
+  m_SizeDelta: {x: -73, y: -11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &938199393
 MonoBehaviour:
@@ -8300,10 +8300,10 @@ RectTransform:
   m_Father: {fileID: 367535866}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 145.71132, y: 161.79039}
-  m_SizeDelta: {x: 635.5873, y: 91.4232}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 145.7113, y: 162.29039}
+  m_SizeDelta: {x: -292.41272, y: -323.57678}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343289940
 MonoBehaviour:
@@ -9385,6 +9385,7 @@ MonoBehaviour:
   - {fileID: 1110444651}
   - {fileID: 1528699600}
   - {fileID: 340026434}
+  basePoints: {fileID: 0}
   coolDown: 0
   sizeOfWave: 0
   spawnedEnemy: 0
@@ -9414,6 +9415,7 @@ MonoBehaviour:
   moneyText: {fileID: 2268195650974307188}
   moneyTextInMenu: {fileID: 1062081775}
   remaningTime: 0
+  baseHealthBar: {fileID: 0}
   totorial: 1
 --- !u!4 &1617234244 stripped
 Transform:
@@ -12193,7 +12195,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

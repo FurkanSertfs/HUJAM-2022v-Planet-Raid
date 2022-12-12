@@ -83,8 +83,11 @@ public class BaseManager : MonoBehaviour,IAttackable
 
         moneyText.text = money.ToString();
         moneyTextInMenu.text = money.ToString();
+        if (!totorial)
+        {
+            baseHealthBar.fillAmount = health / 500.0f;
 
-        baseHealthBar.fillAmount = health / 500.0f;
+        }
 
         if (health < 500)
         {
@@ -114,7 +117,7 @@ public class BaseManager : MonoBehaviour,IAttackable
 
         if (currentBattery>=500)
         {
-            AsyncOperation operation = SceneManager.LoadSceneAsync(2);
+            AsyncOperation operation = SceneManager.LoadSceneAsync(3);
 
 
         }
@@ -151,7 +154,7 @@ public class BaseManager : MonoBehaviour,IAttackable
             if (health < 0)
             {
                
-                AsyncOperation operation = SceneManager.LoadSceneAsync(1);
+                AsyncOperation operation = SceneManager.LoadSceneAsync(2);
                 Destroy(gameObject);
                
 
