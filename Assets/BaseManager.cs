@@ -32,16 +32,25 @@ public class BaseManager : MonoBehaviour,IAttackable
 
     [SerializeField ]int remaningTime;
 
+    [SerializeField] Image baseHealthBar;
+
+     
 
     Vector3 scaleFactor;
 
+   [SerializeField] bool totorial;
 
+    float healthTimer;
 
     private void Start()
     {
         scaleFactor = transform.localScale;
         StartCoroutine(ElectricityGeneration());
-        StartCoroutine(GeriSayim());
+        if (!totorial)
+        {
+            StartCoroutine(GeriSayim());
+
+        }
     }
 
     private void Awake()
@@ -74,7 +83,20 @@ public class BaseManager : MonoBehaviour,IAttackable
 
         moneyText.text = money.ToString();
         moneyTextInMenu.text = money.ToString();
-        
+
+        baseHealthBar.fillAmount = health / 500.0f;
+
+        if (health < 500)
+        {
+            if (healthTimer < Time.time)
+            {
+                health+=5;
+                healthTimer = Time.time + 1.5f;
+
+            }
+
+
+        }
 
         if (EnemySpawner.instance.startWave)
         {
@@ -88,6 +110,13 @@ public class BaseManager : MonoBehaviour,IAttackable
         if (currentBattery >= batteryVolume)
         {
             currentBattery = batteryVolume;
+        }
+
+        if (currentBattery>=500)
+        {
+            AsyncOperation operation = SceneManager.LoadSceneAsync(2);
+
+
         }
 
     }
@@ -121,9 +150,10 @@ public class BaseManager : MonoBehaviour,IAttackable
 
             if (health < 0)
             {
-                Destroy(gameObject);
-                GetComponent<Totorial>().finish = true;
+               
                 AsyncOperation operation = SceneManager.LoadSceneAsync(1);
+                Destroy(gameObject);
+               
 
             }
 

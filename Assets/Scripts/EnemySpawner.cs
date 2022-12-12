@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] Transform[] spawnPoints;
+    [SerializeField] Transform basePoints;
 
     [SerializeField] float coolDown;
     [SerializeField] int sizeOfWave;
@@ -71,7 +72,7 @@ public class EnemySpawner : MonoBehaviour
 
         GameObject newEnemy = Instantiate(enemyPrefab, spawnPoints[randomPoint].position, spawnPoints[randomPoint].rotation);
 
-        newEnemy.GetComponent<Enemy>().mainBase = transform;
+        newEnemy.GetComponent<Enemy>().mainBase = basePoints;
 
         enemies.Add(newEnemy);
 

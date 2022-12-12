@@ -49,7 +49,7 @@ public class Tower : MonoBehaviour
     IEnumerator LookAtStartRotation()
     {
         yield return new WaitForSeconds(1);
-        if (target== null && target.health > 0)
+        if (target== null)
         {
             towerHead.transform.DORotateQuaternion(startRotation, 0.5f);
 
