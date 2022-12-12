@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3ae5adf933a6844b52d6ff30be7c81, type: 3}
   m_Name: Solar Panel
   m_EditorClassIdentifier: 
-  buildResources:
-  - resourcesType: 0
-    resourcesCount: 0
-  - resourcesType: 1
-    resourcesCount: 0
+  price: 1500
   buildPreview: {fileID: 941341861379001873, guid: 22852c98a3910ca4bb80782b7f122353, type: 3}
   buildPrefab: {fileID: 941341861379001873, guid: 03284f22545dad4478e8ceffdfb7e39a, type: 3}
   health: 30

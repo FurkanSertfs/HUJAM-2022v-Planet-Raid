@@ -17,4 +17,11 @@ public class SolarPanel : MonoBehaviour
 
     }
 
+    IEnumerator Production()
+    {
+        yield return new WaitForSeconds(1);
+       
+        BaseManager.instance.currentBattery += 40;
+    }
+
 }

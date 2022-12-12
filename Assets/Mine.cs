@@ -16,6 +16,8 @@ public class Mine : MonoBehaviour
     MeshRenderer meshRenderer;
     int startHealth;
 
+    [SerializeField] LayerMask openLayer, closeLayer;
+
     public AudioSource MineSource;
 
 
@@ -65,6 +67,9 @@ public class Mine : MonoBehaviour
             StartCoroutine(Respawn(respawnTime));
             meshRenderer.enabled = false;
             collider.isTrigger = true;
+            int LayerIgnoreRaycast = LayerMask.NameToLayer("Ignore Raycast");
+            gameObject.layer = LayerIgnoreRaycast;
+           
             
         }
     }
@@ -109,6 +114,8 @@ public class Mine : MonoBehaviour
         meshRenderer.enabled = true;
         collider.isTrigger = false;
         health = startHealth;
+        int DefaultLayer = LayerMask.NameToLayer("Default");
+        gameObject.layer = DefaultLayer;
 
     }
 }

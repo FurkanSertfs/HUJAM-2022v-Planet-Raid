@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3ae5adf933a6844b52d6ff30be7c81, type: 3}
   m_Name: EnergyCell
   m_EditorClassIdentifier: 
-  buildResources:
-  - resourcesType: 0
-    resourcesCount: 0
-  - resourcesType: 1
-    resourcesCount: 0
+  price: 500
   buildPreview: {fileID: 7551484284985854727, guid: 642b0c806b0501948ba219f70de944ae, type: 3}
   buildPrefab: {fileID: 7551484284985854727, guid: 71e01b7ea435f7842be26dfcdc70e451, type: 3}
   health: 30

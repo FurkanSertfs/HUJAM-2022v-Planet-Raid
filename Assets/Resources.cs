@@ -31,7 +31,7 @@ public class Resources : MonoBehaviour
         if (other.GetComponent<Player>() != null)
         {
 
-            Debug.Log("Cikis");
+           
 
 
         }

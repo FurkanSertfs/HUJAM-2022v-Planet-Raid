@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 
-public class BaseManager : MonoBehaviour
+public class BaseManager : MonoBehaviour,IAttackable
 {
     public static BaseManager instance;
 
@@ -18,6 +20,8 @@ public class BaseManager : MonoBehaviour
 
     public int money;
 
+    public  int health;
+
     [SerializeField] Image currentBataryImage;
     
     [SerializeField] Text bataryText;
@@ -26,15 +30,42 @@ public class BaseManager : MonoBehaviour
 
     [SerializeField] Text moneyText, moneyTextInMenu;
 
+    [SerializeField ]int remaningTime;
+
+
+    Vector3 scaleFactor;
+
+
+
     private void Start()
     {
+        scaleFactor = transform.localScale;
         StartCoroutine(ElectricityGeneration());
+        StartCoroutine(GeriSayim());
     }
 
     private void Awake()
     {
         instance = this;
         
+    }
+
+    IEnumerator GeriSayim()
+    {
+        yield return new WaitForSeconds(1);
+
+        if (remaningTime==0)
+        {
+            EnemySpawner.instance.startWave = true;
+        }
+        else
+        {
+            waveText.text = remaningTime.ToString() + " Seconds Left On Enemy Attack";
+            remaningTime--;
+            StartCoroutine(GeriSayim());
+        }
+
+       
     }
 
     private void Update()
@@ -50,10 +81,7 @@ public class BaseManager : MonoBehaviour
             waveText.text = "Wave : " + wave.ToString();
 
         }
-        else
-        {
-            waveText.text = "";
-        }
+       
 
         currentBataryImage.fillAmount = (float)currentBattery / batteryVolume;
 
@@ -70,11 +98,35 @@ public class BaseManager : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
+
+
         currentBattery += generatorCount;
 
         StartCoroutine(ElectricityGeneration());
 
     }
 
+    public void Hit(int damage)
+    {
+        health -= damage;
 
+        transform.DOShakeScale(0.2f, 0.2f, 16, 90, true).OnComplete(() =>
+
+        {
+            if (transform.localScale != scaleFactor)
+            {
+                transform.DOScale(scaleFactor, 0.05f);
+
+            }
+
+            if (health < 0)
+            {
+                Destroy(gameObject);
+                GetComponent<Totorial>().finish = true;
+                AsyncOperation operation = SceneManager.LoadSceneAsync(1);
+
+            }
+
+        });
+    }
 }

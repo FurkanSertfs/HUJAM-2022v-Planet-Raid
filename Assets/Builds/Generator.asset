@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b3ae5adf933a6844b52d6ff30be7c81, type: 3}
   m_Name: Generator
   m_EditorClassIdentifier: 
-  buildResources:
-  - resourcesType: 0
-    resourcesCount: 0
-  - resourcesType: 1
-    resourcesCount: 0
+  price: 750
   buildPreview: {fileID: 3299421319889821696, guid: 9df20d48258c34c48ace2d4aaf4926de, type: 3}
   buildPrefab: {fileID: 3299421319889821696, guid: e76154eb949b6834d9d9fa1942904376, type: 3}
   health: 30

@@ -30,6 +30,7 @@ public class Build : MonoBehaviour , IAttackable
             if (health < 0)
             {
                 Destroy(gameObject);
+                GetComponent<Totorial>().finish = true;
             }
 
         });

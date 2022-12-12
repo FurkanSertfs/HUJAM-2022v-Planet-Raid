@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
 
     public Transform targetPoint;
 
+    int money;
     
 
     private void OnEnable()
@@ -48,7 +49,7 @@ public class Enemy : MonoBehaviour
         scaleFactor = enemyTypes[randomEnemy].scaleFactor;
         health = enemyTypes[randomEnemy].health;
         damage = enemyTypes[randomEnemy].damage;
-        
+        money =Mathf.CeilToInt(enemyTypes[randomEnemy].health * 3.25f);
 
 
     }
@@ -67,7 +68,7 @@ public class Enemy : MonoBehaviour
         if (health > 0)
         {
 
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1.5f);
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 1.75f);
 
             if (touchedEnemyObject==null)
             {
@@ -147,6 +148,8 @@ public class Enemy : MonoBehaviour
                 agent.ResetPath();
 
                 animator.SetBool("isDying", true);
+
+                BaseManager.instance.money += money;
             }
 
             
@@ -160,6 +163,7 @@ public class Enemy : MonoBehaviour
     }
     public void Death()
     {
+       
 
         Destroy(gameObject);
 

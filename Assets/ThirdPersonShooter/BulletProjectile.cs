@@ -27,6 +27,8 @@ public class BulletProjectile : MonoBehaviour {
         if (other.GetComponent<BulletTarget>() != null) {
             // Hit target
             Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
+            Destroy(this);
+            Destroy(gameObject, 0.2f);
 
         }
         else if (other.GetComponent<Mine>() != null)
@@ -35,6 +37,8 @@ public class BulletProjectile : MonoBehaviour {
             {
                 Instantiate(vfxHitGreen, transform.position, Quaternion.identity);
                 other.GetComponent<Mine>().Hit();
+                Destroy(this);
+                Destroy(gameObject, 0.2f);
             }
             
         }
@@ -49,6 +53,9 @@ public class BulletProjectile : MonoBehaviour {
 
 
             other.GetComponent<Enemy>().Hit();
+            Destroy(this);
+            Destroy(gameObject, 0.2f);
+
         }
 
         else 
@@ -57,9 +64,10 @@ public class BulletProjectile : MonoBehaviour {
             
             // Hit something else
             Instantiate(vfxHitRed, transform.position, Quaternion.identity);
+            Destroy(this);
+            Destroy(gameObject, 0.2f);
         }
-        Destroy(this);
-        Destroy(gameObject,0.2f);
+        
     }
 
 }
