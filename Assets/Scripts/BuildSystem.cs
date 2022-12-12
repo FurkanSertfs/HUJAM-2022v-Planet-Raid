@@ -49,6 +49,11 @@ public class BuildSystem : MonoBehaviour
         if (canBuild)
         {
             PlaceBuild();
+
+            if (Input.GetKey(KeyCode.R))
+            {
+                buildPreview.transform.Rotate(0,100*Time.deltaTime,0);
+            }
         }
 
 

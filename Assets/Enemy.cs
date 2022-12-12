@@ -32,6 +32,8 @@ public class Enemy : MonoBehaviour
 
     GameObject touchedEnemyObject;
 
+    public Transform targetPoint;
+
     private void OnEnable()
     {
         int randomEnemy = Random.Range(0, Mathf.Min(BaseManager.instance.wave * 2, enemyTypes.Count));
@@ -91,7 +93,8 @@ public class Enemy : MonoBehaviour
 
                 animator.SetBool("isDying", true);
             }
-          
+
+            
 
             Destroy(agent);
 
@@ -112,9 +115,13 @@ public class Enemy : MonoBehaviour
 
     public void Attack( )
     {
+        if (touchedEnemyObject!=null)
+        {
+            touchedEnemyObject.GetComponent<IAttackable>().Hit(damage);
 
-        touchedEnemyObject.GetComponent<IAttackable>().Hit(damage);
+        }
 
+        touchedEnemy = false;
 
     }
 
@@ -175,7 +182,7 @@ public class Enemy : MonoBehaviour
     {
         if (touchedEnemy)
         {
-            Debug.Log("True");
+           
 
             animator.SetBool("isAttack", true);
 
