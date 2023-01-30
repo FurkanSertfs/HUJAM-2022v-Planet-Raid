@@ -23,11 +23,11 @@ public class CloseControl : MonoBehaviour
     private void OnDisable()
     {
         
-        inputs.cursorLocked = true;
+      //  inputs.cursorLocked = true;
         controller.enabled = true;
         shooterController.enabled = true;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+      //  Cursor.visible = false;
+      //  Cursor.lockState = CursorLockMode.Locked;
         closeUI.SetActive(true);
     }
 

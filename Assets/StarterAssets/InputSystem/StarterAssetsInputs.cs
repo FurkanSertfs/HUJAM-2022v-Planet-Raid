@@ -7,6 +7,8 @@ namespace StarterAssets
 {
 	public class StarterAssetsInputs : MonoBehaviour
 	{
+		public VariableJoystick variableJoystick;
+
 		[Header("Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
@@ -20,12 +22,18 @@ namespace StarterAssets
 
 #if !UNITY_IOS || !UNITY_ANDROID
 		[Header("Mouse Cursor Settings")]
-		public bool cursorLocked = true;
-		public bool cursorInputForLook = true;
+		public bool cursorLocked = false;
+		public bool cursorInputForLook = false;
 #endif
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-		public void OnMove(InputValue value)
+
+        private void Update()
+        {
+			move.y = variableJoystick.Vertical;
+			move.x = variableJoystick.Horizontal;
+		}
+        public void OnMove(InputValue value)
 		{
 			MoveInput(value.Get<Vector2>());
 		}
@@ -56,7 +64,8 @@ namespace StarterAssets
         public void OnShoot(InputValue value) 
         {
             ShootInput(value.isPressed);
-        }
+			
+		}
 #else
 	// old input sys if we do decide to have it (most likely wont)...
 #endif
@@ -89,6 +98,7 @@ namespace StarterAssets
 
         public void ShootInput(bool newShootState) {
             shoot = newShootState;
+			
         }
 
 #if !UNITY_IOS || !UNITY_ANDROID

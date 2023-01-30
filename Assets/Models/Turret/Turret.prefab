@@ -249,7 +249,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 20
+  m_Radius: 35
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3685101561758954250
 GameObject:
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies: []
-  fireRate: 1
+  fireRate: 0.75
   spawnBulletPositionRight: {fileID: 8994718769642455540}
   spawnBulletPositionLeft: {fileID: 2707135340629587680}
   bulletProjectile: {fileID: 6863857337172796870, guid: 9fc5deab5fef94d41b92a7112049f302, type: 3}

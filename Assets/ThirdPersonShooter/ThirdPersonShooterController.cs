@@ -27,7 +27,9 @@ public class ThirdPersonShooterController : MonoBehaviour {
     private StarterAssetsInputs starterAssetsInputs;
     private Animator animator;
     private BaseManager manager;
-   
+
+    [SerializeField]
+    private float shootTime;
 
     private void Awake() {
         thirdPersonController = GetComponent<ThirdPersonController>();
@@ -90,30 +92,14 @@ public class ThirdPersonShooterController : MonoBehaviour {
                 Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));
                 //*/
                 starterAssetsInputs.shoot = false;
+                
                 ShotSongs.pitch = (Random.Range(0.7f, 0.9f));
                 ShotSongs.Play();
                 manager.currentBattery -= bulletCost;
+                shootTime = Time.time + 3;
             }
 
-           
-
-
-            /*
-       // Hit Scan Shoot
-       if (hitTransform != null) {
-           // Hit something
-           if (hitTransform.GetComponent<BulletTarget>() != null) {
-               // Hit target
-               Instantiate(vfxHitGreen, mouseWorldPosition, Quaternion.identity);
-           } else {
-               // Hit something else
-               Instantiate(vfxHitRed, mouseWorldPosition, Quaternion.identity);
-           }
-       }
-       //*/
-            //*
-            // Projectile Shoot
-
+       
 
         }
         else
@@ -122,7 +108,16 @@ public class ThirdPersonShooterController : MonoBehaviour {
 
         }
 
+        if (shootTime < Time.time)
+        {
+            starterAssetsInputs.aim = false;
+        }
+      
+        
+
     }
+
+    
 
 
     private void LateUpdate()

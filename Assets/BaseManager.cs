@@ -115,7 +115,7 @@ public class BaseManager : MonoBehaviour,IAttackable
             currentBattery = batteryVolume;
         }
 
-        if (currentBattery>=500)
+        if (currentBattery>=5000)
         {
             AsyncOperation operation = SceneManager.LoadSceneAsync(3);
 

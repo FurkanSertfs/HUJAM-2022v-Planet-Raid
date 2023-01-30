@@ -52,7 +52,7 @@ public class Mine : MonoBehaviour
 
                 //   FollowPlayer(newResources,0.25f);
 
-                StartCoroutine(FollowRoutine(newResources));
+                StartCoroutine(FollowRoutine(newResources,1f));
                
 
             }); 
@@ -74,18 +74,28 @@ public class Mine : MonoBehaviour
         }
     }
 
-    IEnumerator FollowRoutine(GameObject obj)
+    IEnumerator FollowRoutine(GameObject obj,float speed)
     {
-
-        yield return new WaitForSeconds(0f);
-
-        if (obj)
+        while (true)
         {
-            obj.transform.position = Vector3.Lerp(obj.transform.position, Player.instance.collectPoint.position, 10 * Time.deltaTime);
 
-            StartCoroutine(FollowRoutine(obj));
+            yield return new WaitForSeconds(0f);
 
+            if (obj)
+            {
+                obj.transform.position = Vector3.Lerp(obj.transform.position, Player.instance.collectPoint.position, 10 * Time.deltaTime*speed);
+
+                speed += 0.2f;
+
+
+
+            }
+            else
+            {
+                break;
+            }
         }
+
        
 
 
@@ -95,11 +105,12 @@ public class Mine : MonoBehaviour
     {
         if (obj.transform.position != Player.instance.collectPoint.transform.position)
         {
-            obj.transform.DOMove(Player.instance.collectPoint.transform.position, time).OnComplete(() => 
+            obj.transform.DOMove(Player.instance.collectPoint.transform.position, time/2).OnComplete(() => 
             {
 
-                FollowPlayer(obj,time/3);
-            
+                FollowPlayer(obj,time/5);
+
+                Debug.Log("Round");
             
             });
 

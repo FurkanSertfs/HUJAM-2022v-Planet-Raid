@@ -15,4 +15,4 @@ MonoBehaviour:
   price: 1000
   buildPreview: {fileID: 4252721822270567616, guid: ed7d49bbfbc6c224c8dc73b392c4839c, type: 3}
   buildPrefab: {fileID: 4252721822270567616, guid: 658fc20c1c7a41d438762eea6e978fc8, type: 3}
-  health: 30
+  health: 100
