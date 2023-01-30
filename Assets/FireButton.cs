@@ -13,7 +13,6 @@ public class FireButton : MonoBehaviour
     {
         starterAssetsInputs.shoot = true;
         starterAssetsInputs.aim = true;
-        Debug.Log("1");
        
     }
 }

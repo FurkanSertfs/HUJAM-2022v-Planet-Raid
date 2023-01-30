@@ -27,16 +27,8 @@ public class BuildSystem : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.B))
 
             {
-                if (!buildUserInterface.activeSelf)
-                {
-                    buildUserInterface.SetActive(true);
-                  
-                }
 
-                else
-                {
-                    buildUserInterface.SetActive(false);
-                }
+                OpenBuildMenu();
 
             }
 
@@ -62,7 +54,19 @@ public class BuildSystem : MonoBehaviour
 
     }
 
- 
+    public void OpenBuildMenu()
+    {
+        if (!buildUserInterface.activeSelf)
+        {
+            buildUserInterface.SetActive(true);
+
+        }
+
+        else
+        {
+            buildUserInterface.SetActive(false);
+        }
+    }
 
     void PlaceBuild()
     {
